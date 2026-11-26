@@ -1,0 +1,9 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/sample-tools.csv
+  Content-Type: text/csv; charset=utf-8
+  X-Content-Type-Options: nosniff

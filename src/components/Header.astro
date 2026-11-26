@@ -1,0 +1,50 @@
+---
+import { siteName } from "../config";
+import { comparisons } from "../lib/comparisons";
+import { href, samePath } from "../lib/paths";
+
+const path = Astro.url.pathname;
+const comparisonPaths = comparisons.map((page) => page.path);
+const items = [
+  { href: href("/"), label: "Directory", current: samePath(path, "/") },
+  {
+    href: href("/categories"),
+    label: "Categories",
+    current: path.startsWith("/categories"),
+  },
+  {
+    href: href("/comparisons"),
+    label: "Comparisons",
+    current: samePath(path, "/comparisons") || comparisonPaths.some((item) => samePath(item, path)),
+  },
+  { href: href("/data"), label: "Data", current: samePath(path, "/data") },
+  { href: href("/about"), label: "About", current: samePath(path, "/about") },
+];
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href={href("/")}>
+      <svg class="mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#143d2e"></rect>
+        <rect x="6" y="8" width="14" height="3.2" rx="1.6" fill="#f6f3ec"></rect>
+        <rect x="12" y="14.4" width="14" height="3.2" rx="1.6" fill="#b7e2cf"></rect>
+        <rect x="6" y="20.8" width="10" height="3.2" rx="1.6" fill="#f6f3ec"></rect>
+      </svg>
+      <span>{siteName}</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        {
+          items.map((item) => (
+            <li>
+              <a href={item.href} aria-current={item.current ? "page" : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

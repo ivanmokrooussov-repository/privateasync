@@ -1,0 +1,25 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { contactUrl } from "../config";
+import { href } from "../lib/paths";
+import Base from "../layouts/Base.astro";
+
+const description = "Contact the publisher of PrivateAsync on Gumroad. There is no form and no email address on this site.";
+---
+
+<Base title="Contact | PrivateAsync" description={description}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "Contact" }]} />
+  <h1>Contact</h1>
+  <p class="lede">
+    There is no contact form and no email address on this site. For a correction, a featured listing, or the dataset, use the publisher’s Gumroad page.
+  </p>
+  <p>
+    <a class="button" href={contactUrl} rel="noopener" target="_blank">Open mokrooussov.gumroad.com</a>
+  </p>
+  <p>
+    Gumroad is a separate website. It has its own account system and its own privacy policy. A message sent there is not stored by this static site.
+  </p>
+  <p>
+    If a price or an encryption claim on a tool page looks wrong, include the tool name and the vendor page you are looking at. The row should change only after that page is checked, and the verified date should move with it. See <a href={href("/methodology")}>methodology</a>.
+  </p>
+</Base>

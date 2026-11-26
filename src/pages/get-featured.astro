@@ -1,0 +1,32 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { contactUrl } from "../config";
+import { href } from "../lib/paths";
+import Base from "../layouts/Base.astro";
+
+const description =
+  "Ask about a sponsored listing on PrivateAsync. Listings would be labelled and kept separate from the alphabetical table. Pricing is not set. No payment on this site.";
+---
+
+<Base title="Get featured | PrivateAsync" description={description}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "Get featured" }]} />
+  <h1>Get featured</h1>
+  <p class="lede">
+    A featured listing would be a labelled “Sponsored” block, separate from the alphabetical table. Pricing is not set. There is no payment on this site, and there are no featured slots on the directory today.
+  </p>
+  <h2>What a listing would be</h2>
+  <ul>
+    <li>Placed outside the ranked table, not mixed into alphabetical order.</li>
+    <li>Labelled Sponsored, in the same plain way an affiliate link is labelled.</li>
+    <li>Unable to change the verified facts. Price, encryption claim, open source, self-hosting, jurisdiction, and the verified date stay as checked.</li>
+    <li>Able to include a logo and a short blurb supplied by the vendor. That blurb would be labelled as the vendor’s text, not as a checked fact.</li>
+  </ul>
+  <h2>What this page is not</h2>
+  <p>
+    It is not a checkout, a rate card, or a promise that a listing is available. To ask about one, use the publisher’s Gumroad page. The answer can be no.
+  </p>
+  <p>
+    <a class="button" href={contactUrl} rel="noopener" target="_blank">Contact via Gumroad</a>
+  </p>
+  <p>Affiliate links, which are different from a featured block, are described on the <a href={href("/affiliate-disclosure")}>affiliate disclosure</a> page.</p>
+</Base>

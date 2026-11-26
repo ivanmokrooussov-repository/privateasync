@@ -1,0 +1,106 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import ValueGuide from "../components/ValueGuide.astro";
+import { verifiedDates, verifiedSentence } from "../lib/format";
+import { href } from "../lib/paths";
+import { tools } from "../lib/tools";
+import Base from "../layouts/Base.astro";
+
+const description =
+  "How PrivateAsync checks a tool: vendor pages, the verified date, and what unknown, not stated, and no claim mean.";
+const dates = verifiedDates(tools);
+---
+
+<Base title="Methodology | PrivateAsync" description={description}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "Methodology" }]} />
+  <h1>Methodology</h1>
+  <p class="lede">
+    A row is a set of notes from the vendor’s own pages, dated, with the URLs that were read. It is not a test of the product and not a ranking.
+  </p>
+  <p>{verifiedSentence(tools)} {dates.length === 1 ? "That is the check date for this release." : "Those are the check dates stored on the rows."}</p>
+
+  <h2>What was checked</h2>
+  <p>
+    For each tool we stored the official site, a short description, the price text as shown, whether a free tier was shown, the end-to-end encryption claim, whether the project was presented as open source, a repository URL when one was found, whether self-hosting was stated, a jurisdiction note, platforms when they were listed, compliance claims when they were stated, and what we found about an affiliate or partner program.
+  </p>
+  <p>
+    The pages used are listed on the tool page under “Pages checked.” Where a field has its own source, that link sits next to the field. Descriptions are short lines stored in the dataset. They are not pasted vendor headlines.
+  </p>
+  <p>
+    We did not buy every product, create an account on every product, or audit encryption. If the pages we opened did not show a fact, the field stays <strong>unknown</strong> or <strong>not stated</strong>. We do not fill the gap from a review site or from memory.
+  </p>
+
+  <h2>End-to-end encryption</h2>
+  <p>
+    On a tool page this is worded as “vendor states…”, with a link, whenever the vendor claimed it. “No claim” is not a laboratory result. It means those pages did not claim end-to-end encryption, so this site will not say they did.
+  </p>
+  <ValueGuide field="e2ee" caption="End-to-end encryption values" />
+
+  <h2>Free tier</h2>
+  <ValueGuide field="free_tier" caption="Free tier values" />
+  <p>Limits, caps, and trial lengths live in the price text. The price cell is copied, not rewritten into a single number when the vendor showed several plans.</p>
+
+  <h2>Open source</h2>
+  <ValueGuide field="open_source" caption="Open source values" />
+
+  <h2>Self-hostable</h2>
+  <ValueGuide field="self_hostable" caption="Self-hosting values" />
+  <p>A “yes” here is the vendor stating that self-hosting is available. It is a separate field from end-to-end encryption and from price.</p>
+
+  <h2>Jurisdiction</h2>
+  <p>
+    The jurisdiction cell is the note stored from a footer, imprint, or hosting sentence on the vendor’s site. If that note names a country, the directory filter can match that country. The filter does not invent a country from a company suffix such as “Inc.” or “LLC”. If the note has no country, the filter value is “country not stated” and the cell still shows the full note. If nothing was found, the cell is unknown.
+  </p>
+  <p>The note is not a legal opinion about which country’s law applies, and it is not a map of where every byte is stored, unless the words in the note say that.</p>
+
+  <h2>Compliance</h2>
+  <p>
+    Compliance text is shown as “Vendor states: …”, with the source, when the vendor page named a standard or a regulation. Unknown means those pages did not give one we recorded. A compliance claim is not the same thing as an end-to-end encryption claim.
+  </p>
+
+  <h2>Affiliate and partner programs</h2>
+  <p>The dataset records what we found. It is not the tracking link this site uses. Tracking links, if any, are added separately and labelled on the page. See the <a href={href("/affiliate-disclosure")}>affiliate disclosure</a>.</p>
+  <table class="vocab">
+    <caption class="sr-only">Affiliate program values</caption>
+    <thead>
+      <tr>
+        <th scope="col">Value</th>
+        <th scope="col">What we recorded</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Yes</th>
+        <td>A public affiliate or referral program with commission.</td>
+      </tr>
+      <tr>
+        <th scope="row">Credit only</th>
+        <td>Referral credit, not a cash commission.</td>
+      </tr>
+      <tr>
+        <th scope="row">Reseller only</th>
+        <td>A reseller or partner program, not a content-site commission.</td>
+      </tr>
+      <tr>
+        <th scope="row">None found</th>
+        <td>No program found when the row was checked.</td>
+      </tr>
+      <tr>
+        <th scope="row">No</th>
+        <td>The vendor’s pages said there is no affiliate program.</td>
+      </tr>
+      <tr>
+        <th scope="row">Unknown</th>
+        <td>Not found on the pages checked.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Order</h2>
+  <p>Default order is alphabetical by name. There is no score for privacy, popularity, or commission.</p>
+
+  <h2>Updates</h2>
+  <p>
+    The intended cadence is at least quarterly: open the source URLs, correct the row, set <code>date_verified</code>, and rebuild the site. Until a row is edited, the site keeps showing the old date. This release does not claim that every page was re-read after {dates[0] ?? "the stored date"}.
+  </p>
+</Base>

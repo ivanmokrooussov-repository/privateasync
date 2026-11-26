@@ -1,0 +1,31 @@
+---
+import { categories } from "../../lib/categories";
+import { categoryHref, href } from "../../lib/paths";
+import { tools } from "../../lib/tools";
+import Base from "../../layouts/Base.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+
+const description = "Eight categories of private and async team tools, from end-to-end encrypted chat to encrypted email. Counts come from the verified dataset.";
+---
+
+<Base title="Categories | PrivateAsync" description={description}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "Categories" }]} />
+  <h1>Categories</h1>
+  <p class="lede">
+    Each tool has one category. The category is our filing, not a rank and not a promise that every tool in it shares the same encryption claim. Open a category for the rows, or filter the <a href={href("/")}>full directory</a>.
+  </p>
+  <div class="card-grid">
+    {
+      categories.map((category) => {
+        const count = tools.filter((tool) => tool.category === category.name).length;
+        return (
+          <a class="card" href={categoryHref(category.slug)}>
+            <h2>{category.name}</h2>
+            <p class="meta">{count} {count === 1 ? "tool" : "tools"}</p>
+            <p>{category.summary}</p>
+          </a>
+        );
+      })
+    }
+  </div>
+</Base>

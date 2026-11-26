@@ -1,0 +1,31 @@
+---
+import { displayToken, VALUE_GUIDE } from "../lib/format";
+
+interface Props {
+  field: keyof typeof VALUE_GUIDE;
+  caption: string;
+}
+
+const { field, caption } = Astro.props;
+const rows = VALUE_GUIDE[field];
+---
+
+<table class="vocab">
+  <caption class="sr-only">{caption}</caption>
+  <thead>
+    <tr>
+      <th scope="col">Value</th>
+      <th scope="col">What we mean</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      rows.map((row) => (
+        <tr>
+          <th scope="row">{displayToken(row.value)}</th>
+          <td>{row.means}</td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
