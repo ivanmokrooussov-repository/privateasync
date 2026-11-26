@@ -1,0 +1,13 @@
+---
+import ComparisonView from "../components/ComparisonView.astro";
+import { rootComparisons } from "../lib/comparisons";
+
+export function getStaticPaths() {
+  return rootComparisons.map((page) => ({ params: { slug: page.slug } }));
+}
+
+const { slug } = Astro.params;
+if (!slug) throw new Error("Missing comparison slug.");
+---
+
+<ComparisonView slug={slug} />

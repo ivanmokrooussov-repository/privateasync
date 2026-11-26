@@ -1,0 +1,45 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { affiliateLinks } from "../config";
+import { href } from "../lib/paths";
+import { toolById } from "../lib/tools";
+import Base from "../layouts/Base.astro";
+
+const active = Object.entries(affiliateLinks)
+  .filter(([, url]) => url.trim().length > 0)
+  .map(([id]) => toolById.get(id)?.name ?? id);
+
+const description =
+  "When a PrivateAsync link is labelled affiliate, we may earn a commission. Tables stay alphabetical. This disclosure is not legal advice.";
+---
+
+<Base title="Affiliate disclosure | PrivateAsync" description={description}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "Affiliate disclosure" }]} />
+  <h1>Affiliate disclosure</h1>
+  <p class="lede">
+    Some visit links on PrivateAsync may be affiliate links. If you use one and buy something, we may earn a commission from the vendor. The label on the link says <span class="aff-label">affiliate</span>. The HTML <code>rel</code> attribute includes <code>sponsored</code>.
+  </p>
+  <p>
+    You should not pay more because of that link, unless the vendor’s own offer says otherwise. We do not control the vendor’s price.
+  </p>
+  <p>
+    Commission does not change the order of tools. Tables are alphabetical by name. Tools with no affiliate program, including ones that say so on their own site, stay in the same tables.
+  </p>
+  <p>
+    The dataset field <code>affiliate_url</code> is the vendor’s public program page when we found one, or <code>unknown</code>. A program can be recorded there while the visit link on this site still goes to the official product page. The visit link becomes an affiliate link only after a tracking URL is added in the site config, and only then is it labelled.
+  </p>
+  {
+    active.length === 0 ? (
+      <p>In this build, no affiliate tracking URL is configured. Visit links go to each vendor’s official site.</p>
+    ) : (
+      <p>This build uses a labelled affiliate link for: {active.join(", ")}.</p>
+    )
+  }
+  <p>
+    The short disclosure in the footer is on every page. When a page actually contains an affiliate link, the same disclosure is repeated above that link.
+  </p>
+  <p>
+    This note is meant to be clear and easy to see, in the spirit of Canada’s Competition Act rules on misleading representations. It is not legal advice, and it is not a statement that a particular link meets any one regulator’s test.
+  </p>
+  <p>How rows are checked, and why order stays alphabetical, is on the <a href={href("/methodology")}>methodology</a> page.</p>
+</Base>

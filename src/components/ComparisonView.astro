@@ -1,0 +1,112 @@
+---
+import Breadcrumb from "./Breadcrumb.astro";
+import Rollup from "./Rollup.astro";
+import ToolTable from "./ToolTable.astro";
+import ValueGuide from "./ValueGuide.astro";
+import Base from "../layouts/Base.astro";
+import { categoryByName } from "../lib/categories";
+import { comparisonBySlug, toolsForComparison } from "../lib/comparisons";
+import { displayRecorded, displayToken, meaning, verifiedSentence } from "../lib/format";
+import { categoryHref, href, toolHref } from "../lib/paths";
+import { requireTool } from "../lib/tools";
+
+interface Props {
+  slug: string;
+}
+
+const page = comparisonBySlug(Astro.props.slug);
+const list = toolsForComparison(page);
+const categoriesInTable = [...new Set(list.map((tool) => tool.category))]
+  .map((name) => categoryByName(name))
+  .filter((category) => category !== undefined);
+const related = page.related.map((slug) => comparisonBySlug(slug));
+const pair = page.pair?.map((id) => requireTool(id));
+---
+
+<Base title={page.title} description={page.description}>
+  <Breadcrumb
+    items={[
+      { name: "Home", href: href("/") },
+      { name: "Comparisons", href: href("/comparisons") },
+      { name: page.h1 },
+    ]}
+  />
+  <article class="prose">
+    <h1>{page.h1}</h1>
+    {page.paragraphs.map((paragraph) => <p class="lede">{paragraph}</p>)}
+    {
+      page.bullets && (
+        <ul>
+          {page.bullets.map((bullet) => (
+            <li>{bullet}</li>
+          ))}
+        </ul>
+      )
+    }
+    {
+      page.showE2eeGuide && (
+        <>
+          <h2>How this site records end-to-end encryption</h2>
+          <ValueGuide field="e2ee" caption="End-to-end encryption values" />
+          <p>
+            Encryption of a connection, or of stored copies, is not recorded as a “yes”. A “yes” is only the sentence in the table: the vendor states that the product uses end-to-end encryption.
+          </p>
+        </>
+      )
+    }
+    <p>These groups are counted from the table. They are not a ranking.</p>
+    <Rollup title="End-to-end encryption, as recorded" tools={list} field="e2ee" order={["yes", "optional", "no_claim", "unknown"]} />
+    <Rollup title="Free tier, as recorded" tools={list} field="free_tier" order={["yes", "no_trial_only", "unknown"]} />
+    {
+      pair && (
+        <section>
+          <h2>{pair[0].name} and {pair[1].name}, side by side</h2>
+          <p>The cells are the recorded fields. This is not a ranking, and neither tool is placed first as a recommendation.</p>
+          <div class="pair">
+            {pair.map((tool) => (
+              <article class="card">
+                <h3><a href={toolHref(tool.id)}>{tool.name}</a></h3>
+                <p><strong>Price as shown.</strong> {displayRecorded(tool.pricing_as_shown)}</p>
+                <p><strong>Free tier.</strong> {displayToken(tool.free_tier)}. {meaning("free_tier", tool.free_tier)}</p>
+                <p><strong>End-to-end encryption.</strong> {displayToken(tool.e2ee)}. {meaning("e2ee", tool.e2ee)}</p>
+                <p><strong>Open source.</strong> {displayToken(tool.open_source)}. {meaning("open_source", tool.open_source)}</p>
+                <p><strong>Self-hostable.</strong> {displayToken(tool.self_hostable)}. {meaning("self_hostable", tool.self_hostable)}</p>
+                <p><strong>Jurisdiction, as recorded.</strong> {displayRecorded(tool.hq_jurisdiction)}</p>
+                <p><strong>Platforms.</strong> {displayRecorded(tool.platforms)}</p>
+                <p class="meta">Verified <time datetime={tool.date_verified}>{tool.date_verified}</time></p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )
+    }
+    <h2>The verified rows</h2>
+    <ToolTable
+      tools={list}
+      columns={page.columns}
+      caption={`${list.length} tools, alphabetical by name. “Official site” opens in a new tab. ${verifiedSentence(list)}`}
+    />
+    <p>{verifiedSentence(list)} Order is alphabetical by name. <a href={href("/methodology")}>How a row is verified</a>.</p>
+    {
+      categoriesInTable.length > 0 && (
+        <p>
+          Categories in this table:{" "}
+          {categoriesInTable.map((category, index) => (
+            <>
+              {index > 0 && ", "}
+              <a href={categoryHref(category.slug)}>{category.name}</a>
+            </>
+          ))}
+          .
+        </p>
+      )
+    }
+    <h2>Related pages</h2>
+    <ul>
+      {related.map((item) => (
+        <li><a href={item.path}>{item.h1}</a></li>
+      ))}
+      <li><a href={href("/comparisons")}>All comparisons</a></li>
+    </ul>
+  </article>
+</Base>

@@ -1,0 +1,68 @@
+---
+import DatasetDownload from "../components/DatasetDownload.astro";
+import ToolTable from "../components/ToolTable.astro";
+import { siteName, siteUrl } from "../config";
+import { categories } from "../lib/categories";
+import { rootComparisons } from "../lib/comparisons";
+import { verifiedSentence } from "../lib/format";
+import { categoryHref, href } from "../lib/paths";
+import { tools } from "../lib/tools";
+import Base from "../layouts/Base.astro";
+
+const description =
+  "A directory of privacy-focused and async team communication tools. Prices and encryption claims are copied from vendor pages, with the date checked. Unknown stays unknown.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteName,
+  url: `${siteUrl}/`,
+  description,
+};
+---
+
+<Base title="PrivateAsync — verified directory of private and async team tools" description={description} jsonLd={jsonLd}>
+  <p class="kicker">{tools.length} tools · {categories.length} categories · alphabetical</p>
+  <h1>Private and async team tools, checked against the vendor’s pages.</h1>
+  <p class="lede">
+    PrivateAsync lists {tools.length} team communication tools. The set mixes privacy-focused products and async ones. Each row keeps the price as shown and the other fields we could verify, plus the date. If a fact was not found, the cell says unknown.
+  </p>
+  <p class="lede">
+    “Yes” under <abbr title="End-to-end encryption">E2EE</abbr> means the vendor states it. “No claim” means the pages we checked did not say that. {verifiedSentence(tools)}
+    <a href={href("/methodology")}>How a row is verified</a>.
+  </p>
+  <ToolTable
+    tools={tools}
+    filterable={true}
+    columns={["name", "category", "price", "free", "e2ee", "oss", "host", "jurisdiction", "verified"]}
+    caption={`All ${tools.length} tools, alphabetical by name. “Official site” opens in a new tab.`}
+  />
+
+  <h2>Categories</h2>
+  <ul>
+    {
+      categories.map((category) => (
+        <li>
+          <a href={categoryHref(category.slug)}>{category.name}</a>
+          <span class="meta"> ({tools.filter((tool) => tool.category === category.name).length})</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>Comparisons from this dataset</h2>
+  <ul>
+    {
+      rootComparisons.map((page) => (
+        <li>
+          <a href={page.path}>{page.h1}</a>
+        </li>
+      ))
+    }
+    <li>
+      <a href={href("/guides/can-your-boss-read-your-slack-messages")}>Can your boss read your Slack or Teams messages?</a>
+    </li>
+  </ul>
+
+  <DatasetDownload compact={true} />
+</Base>

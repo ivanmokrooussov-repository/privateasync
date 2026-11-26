@@ -1,0 +1,257 @@
+---
+import OutboundLink from "./OutboundLink.astro";
+import { categories, categoryByName } from "../lib/categories";
+import {
+  displayRecorded,
+  displayToken,
+  facetLabel,
+  jurisdictionFacet,
+  pillTone,
+  searchBlob,
+} from "../lib/format";
+import { anyAffiliate } from "../lib/links";
+import { categoryHref, toolHref } from "../lib/paths";
+import type { ColumnId, Tool } from "../lib/types";
+
+interface Props {
+  tools: Tool[];
+  columns: ColumnId[];
+  caption: string;
+  filterable?: boolean;
+}
+
+const { tools, columns, caption, filterable = false } = Astro.props;
+const showAffiliateNote = anyAffiliate(tools);
+
+const headers: Record<ColumnId, string> = {
+  name: "Tool",
+  category: "Category",
+  price: "Price as shown",
+  free: "Free tier",
+  e2ee: "E2EE",
+  oss: "Open source",
+  host: "Self-hostable",
+  jurisdiction: "Jurisdiction",
+  platforms: "Platforms",
+  compliance: "Compliance",
+  verified: "Verified",
+};
+
+const categoryOptions = categories.filter((category) => tools.some((tool) => tool.category === category.name));
+
+function optionsFor(field: "free_tier" | "e2ee" | "open_source" | "self_hostable", order: string[]) {
+  const present = new Set(tools.map((tool) => tool[field]));
+  return order.filter((value) => present.has(value));
+}
+
+const freeOptions = optionsFor("free_tier", ["yes", "no_trial_only", "unknown"]);
+const e2eeOptions = optionsFor("e2ee", ["yes", "optional", "no_claim", "unknown"]);
+const ossOptions = optionsFor("open_source", ["yes", "not_stated", "unknown"]);
+const hostOptions = optionsFor("self_hostable", ["yes", "not_stated", "unknown"]);
+
+const facets = [...new Set(tools.map((tool) => jurisdictionFacet(tool.hq_jurisdiction)))];
+const jurisdictionOptions = [
+  ...facets.filter((facet) => facet !== "unknown" && facet !== "country not stated").sort((a, b) => a.localeCompare(b)),
+  ...(facets.includes("country not stated") ? ["country not stated"] : []),
+  ...(facets.includes("unknown") ? ["unknown"] : []),
+];
+
+const minWidth = Math.max(720, columns.length * 148);
+---
+
+<div class="directory" data-directory data-filterable={filterable ? "true" : undefined}>
+  {
+    filterable && (
+      <form data-filters id="filters" role="search" aria-label="Filter the directory">
+        <fieldset class="filters">
+          <legend>Filter the directory</legend>
+          <div class="span-2">
+            <label for="q">Search</label>
+            <input id="q" name="q" type="search" placeholder="Name, price, or description" autocomplete="off" />
+          </div>
+          <div>
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="">Any</option>
+              {categoryOptions.map((category) => (
+                <option value={category.name}>{category.name}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label for="free">Free tier</label>
+            <select id="free" name="free">
+              <option value="">Any</option>
+              {freeOptions.map((value) => (
+                <option value={value}>{displayToken(value)}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label for="e2ee">E2EE</label>
+            <select id="e2ee" name="e2ee">
+              <option value="">Any</option>
+              {e2eeOptions.map((value) => (
+                <option value={value}>{displayToken(value)}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label for="oss">Open source</label>
+            <select id="oss" name="oss">
+              <option value="">Any</option>
+              {ossOptions.map((value) => (
+                <option value={value}>{displayToken(value)}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label for="host">Self-hostable</label>
+            <select id="host" name="host">
+              <option value="">Any</option>
+              {hostOptions.map((value) => (
+                <option value={value}>{displayToken(value)}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label for="jurisdiction">Jurisdiction</label>
+            <select id="jurisdiction" name="jurisdiction" aria-describedby="filter-help">
+              <option value="">Any</option>
+              {jurisdictionOptions.map((facet) => (
+                <option value={facet}>{facetLabel(facet)}</option>
+              ))}
+            </select>
+          </div>
+          <p class="filter-help" id="filter-help">
+            Jurisdiction matches a country named in the recorded note. It does not add a country we did not find. “Country not stated” means the note has no country.
+          </p>
+          <div class="filter-actions">
+            <button class="button secondary" type="button" data-reset>Reset filters</button>
+          </div>
+        </fieldset>
+      </form>
+    )
+  }
+  {showAffiliateNote && (
+    <p class="disclosure">
+      <strong>Disclosure.</strong> Links labelled “affiliate” below are paid links. We may earn a commission if you use one. The label does not change alphabetical order.
+    </p>
+  )}
+  {
+    filterable && (
+      <noscript>
+        <p>JavaScript is off, so the filters do not run. Every tool in this list is shown below.</p>
+      </noscript>
+    )
+  }
+  {filterable && <p class="count" data-count aria-live="polite">Showing {tools.length} of {tools.length} tools</p>}
+  <div class="table-scroll" tabindex="0">
+    <table class="data" style={`--table-min:${minWidth}px`}>
+      <caption>{caption}</caption>
+      <thead>
+        <tr>
+          {
+            columns.map((column) => (
+              <th scope="col">
+                {column === "e2ee" ? <abbr title="End-to-end encryption">E2EE</abbr> : headers[column]}
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          tools.map((tool) => (
+            <tr
+              data-name={tool.name}
+              data-search={searchBlob(tool)}
+              data-category={tool.category}
+              data-free={tool.free_tier}
+              data-e2ee={tool.e2ee}
+              data-oss={tool.open_source}
+              data-host={tool.self_hostable}
+              data-jurisdiction={jurisdictionFacet(tool.hq_jurisdiction)}
+            >
+              {columns.map((column) => (
+                <td class={column === "price" ? "col-price" : column === "jurisdiction" ? "col-jurisdiction" : column === "compliance" ? "col-compliance" : column === "platforms" ? "col-platforms" : undefined}>
+                  {column !== "name" && <span class="cell-label">{column === "e2ee" ? "E2EE" : headers[column]}</span>}
+                  {column === "name" && (
+                    <>
+                      <a class="tool-link" href={toolHref(tool.id)}>{tool.name}</a>
+                      <OutboundLink tool={tool} />
+                    </>
+                  )}
+                  {column === "category" && <a href={categoryHref(categoryByName(tool.category)?.slug ?? "")}>{tool.category}</a>}
+                  {column === "price" && displayRecorded(tool.pricing_as_shown)}
+                  {column === "free" && <span class={`pill pill-${pillTone(tool.free_tier)}`}>{displayToken(tool.free_tier)}</span>}
+                  {column === "e2ee" && <span class={`pill pill-${pillTone(tool.e2ee)}`}>{displayToken(tool.e2ee)}</span>}
+                  {column === "oss" && <span class={`pill pill-${pillTone(tool.open_source)}`}>{displayToken(tool.open_source)}</span>}
+                  {column === "host" && <span class={`pill pill-${pillTone(tool.self_hostable)}`}>{displayToken(tool.self_hostable)}</span>}
+                  {column === "jurisdiction" && <span title={tool.hq_jurisdiction}>{displayRecorded(tool.hq_jurisdiction)}</span>}
+                  {column === "platforms" && displayRecorded(tool.platforms)}
+                  {column === "compliance" && displayRecorded(tool.compliance_claims)}
+                  {column === "verified" && <time datetime={tool.date_verified}>{tool.date_verified}</time>}
+                </td>
+              ))}
+            </tr>
+          ))
+        }
+        <tr data-empty hidden>
+          <td colspan={columns.length}>No tools match these filters. Reset filters to see the full list.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{
+  filterable && (
+    <script>
+      function apply(root) {
+        const form = root.querySelector("[data-filters]");
+        if (!form) return;
+        const data = new FormData(form);
+        const q = String(data.get("q") || "").trim().toLowerCase();
+        const category = String(data.get("category") || "");
+        const free = String(data.get("free") || "");
+        const e2ee = String(data.get("e2ee") || "");
+        const oss = String(data.get("oss") || "");
+        const host = String(data.get("host") || "");
+        const jurisdiction = String(data.get("jurisdiction") || "");
+        const rows = root.querySelectorAll("tr[data-name]");
+        let shown = 0;
+        rows.forEach((row) => {
+          const ok =
+            (!q || (row.dataset.search || "").includes(q)) &&
+            (!category || row.dataset.category === category) &&
+            (!free || row.dataset.free === free) &&
+            (!e2ee || row.dataset.e2ee === e2ee) &&
+            (!oss || row.dataset.oss === oss) &&
+            (!host || row.dataset.host === host) &&
+            (!jurisdiction || row.dataset.jurisdiction === jurisdiction);
+          row.hidden = !ok;
+          if (ok) shown += 1;
+        });
+        const empty = root.querySelector("[data-empty]");
+        if (empty) empty.hidden = shown !== 0;
+        const count = root.querySelector("[data-count]");
+        if (count) count.textContent = `Showing ${shown} of ${rows.length} tools`;
+      }
+
+      document.querySelectorAll("[data-directory][data-filterable]").forEach((root) => {
+        const form = root.querySelector("[data-filters]");
+        if (!form) return;
+        form.addEventListener("submit", (event) => event.preventDefault());
+        form.addEventListener("input", () => apply(root));
+        form.addEventListener("change", () => apply(root));
+        const reset = root.querySelector("[data-reset]");
+        reset?.addEventListener("click", () => {
+          form.reset();
+          apply(root);
+        });
+        apply(root);
+      });
+    </script>
+  )
+}

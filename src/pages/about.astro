@@ -1,0 +1,41 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { contactUrl } from "../config";
+import { verifiedSentence } from "../lib/format";
+import { href } from "../lib/paths";
+import { tools } from "../lib/tools";
+import Base from "../layouts/Base.astro";
+
+const description =
+  "PrivateAsync is an independent directory. Rows are copied from vendor pages, with the date checked. It is not run by the tools it lists.";
+---
+
+<Base title="About | PrivateAsync" description={description}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "About" }]} />
+  <h1>About</h1>
+  <p class="lede">
+    PrivateAsync is an independent directory of privacy-focused and async team communication tools. It is not operated by the vendors listed here.
+  </p>
+  <p>
+    The facts are the file <code>src/data/tools.json</code> in this project. Each row records what that vendor’s own pages showed on the verified date, including when a fact was not found. {verifiedSentence(tools)} There are {tools.length} tools in this build.
+  </p>
+  <p>
+    Tables are alphabetical by name. A future affiliate link, if one is added and labelled, does not move a tool up or down. Tools with no affiliate program stay in the same tables.
+  </p>
+  <p>
+    The public site is <a href="https://privateasync.pages.dev/">privateasync.pages.dev</a>. It is a set of static files: no accounts, no cookies set by the site, and no analytics script.
+  </p>
+  <h2>On this site</h2>
+  <ul>
+    <li><a href={href("/methodology")}>Methodology</a> — how a row was checked, and what the values mean.</li>
+    <li><a href={href("/affiliate-disclosure")}>Affiliate disclosure</a></li>
+    <li><a href={href("/privacy")}>Privacy</a></li>
+    <li><a href={href("/data")}>Download the dataset</a></li>
+    <li><a href={href("/get-featured")}>Get featured</a></li>
+    <li><a href={href("/contact")}>Contact</a></li>
+  </ul>
+  <p>
+    Corrections, featured listings, and the dataset go through the publisher’s Gumroad page:
+    <a href={contactUrl} rel="noopener" target="_blank">mokrooussov.gumroad.com</a>.
+  </p>
+</Base>

@@ -1,0 +1,18 @@
+---
+import { visitLink, visitRel } from "../lib/links";
+import type { Tool } from "../lib/types";
+
+interface Props {
+  tool: Tool;
+}
+
+const { tool } = Astro.props;
+const link = visitLink(tool);
+---
+
+<span class="outbound">
+  <a href={link.href} rel={visitRel(link.affiliate)} target="_blank" data-affiliate={link.affiliate ? "true" : undefined}>
+    {link.affiliate ? "Visit site" : "Official site"}
+  </a>
+  {link.affiliate && <span class="aff-label">affiliate</span>}
+</span>

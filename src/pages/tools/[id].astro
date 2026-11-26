@@ -1,0 +1,187 @@
+---
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import OutboundLink from "../../components/OutboundLink.astro";
+import { categoryOf, tools } from "../../lib/tools";
+import { comparisonsForTool } from "../../lib/comparisons";
+import {
+  affiliateProgramSentence,
+  clipText,
+  complianceStatement,
+  displayToken,
+  fieldSources,
+  isHttpUrl,
+  meaning,
+  sourceLabel,
+} from "../../lib/format";
+import { isAffiliate } from "../../lib/links";
+import { categoryHref, href, toolHref } from "../../lib/paths";
+import Base from "../../layouts/Base.astro";
+import type { Tool } from "../../lib/types";
+
+export function getStaticPaths() {
+  return tools.map((tool) => ({ params: { id: tool.id }, props: { tool } }));
+}
+
+interface Props {
+  tool: Tool;
+}
+
+const { tool } = Astro.props;
+const category = categoryOf(tool);
+const related = comparisonsForTool(tool);
+const affiliate = isAffiliate(tool);
+const description = clipText(
+  `${tool.name} (${tool.category}). Price as shown: ${tool.pricing_as_shown}. End-to-end encryption: ${displayToken(tool.e2ee)}. Verified ${tool.date_verified}.`,
+);
+
+function recorded(value: string): string {
+  if (!value || value === "unknown") return "Unknown — not found on the pages checked.";
+  return value;
+}
+---
+
+<Base title={`${tool.name}: price and encryption claim | PrivateAsync`} description={description}>
+  <Breadcrumb
+    items={[
+      { name: "Home", href: href("/") },
+      { name: category.name, href: categoryHref(category.slug) },
+      { name: tool.name, href: toolHref(tool.id) },
+    ]}
+  />
+  <p class="kicker">Verified <time datetime={tool.date_verified}>{tool.date_verified}</time></p>
+  <h1>{tool.name}</h1>
+  <p class="lede">
+    Filed under <a href={categoryHref(category.slug)}>{category.name}</a>. This page repeats the verified row. It is not a review, and it does not add claims that are not in the row.
+  </p>
+  <p><strong>Description in the dataset.</strong> {tool.description}</p>
+  {
+    affiliate && (
+      <p class="disclosure">
+        <strong>Disclosure.</strong> The visit link below is labelled “affiliate”. We may earn a commission if you use it. That does not change where this tool sits in the alphabetical tables.
+      </p>
+    )
+  }
+  <p>
+    <OutboundLink tool={tool} />
+  </p>
+
+  <h2>Facts recorded on {tool.date_verified}</h2>
+  <p>Encryption and compliance lines are the vendor’s claim, linked to the page we checked. PrivateAsync did not test them.</p>
+  <dl class="facts">
+    <div>
+      <dt>Price as shown</dt>
+      <dd>
+        {recorded(tool.pricing_as_shown)}
+        <span class="meta"> Verified <time datetime={tool.date_verified}>{tool.date_verified}</time>.</span>
+      </dd>
+    </div>
+    <div>
+      <dt>Free tier</dt>
+      <dd>{displayToken(tool.free_tier)}. {meaning("free_tier", tool.free_tier)}</dd>
+    </div>
+    <div>
+      <dt>End-to-end encryption</dt>
+      <dd>
+        {meaning("e2ee", tool.e2ee)}
+        <span class="sources-inline">
+          {fieldSources(tool, "e2ee").map((url) => (
+            <a href={url} rel="noopener" target="_blank">{sourceLabel(url)}</a>
+          ))}
+        </span>
+      </dd>
+    </div>
+    <div>
+      <dt>Open source</dt>
+      <dd>
+        {meaning("open_source", tool.open_source)}
+        {
+          isHttpUrl(tool.repo_url) ? (
+            <span class="sources-inline">
+              <a href={tool.repo_url} rel="noopener" target="_blank">Repository: {sourceLabel(tool.repo_url)}</a>
+            </span>
+          ) : (
+            <span class="meta"> No repository URL recorded.</span>
+          )
+        }
+      </dd>
+    </div>
+    <div>
+      <dt>Self-hostable</dt>
+      <dd>
+        {meaning("self_hostable", tool.self_hostable)}
+        <span class="sources-inline">
+          {fieldSources(tool, "self_host").map((url) => (
+            <a href={url} rel="noopener" target="_blank">{sourceLabel(url)}</a>
+          ))}
+        </span>
+      </dd>
+    </div>
+    <div>
+      <dt>Jurisdiction (as recorded)</dt>
+      <dd>
+        {recorded(tool.hq_jurisdiction)}
+        <span class="meta"> This is the note stored from the vendor’s pages. It is not a separate ruling about where data is hosted, unless the note itself says that.</span>
+      </dd>
+    </div>
+    <div>
+      <dt>Platforms</dt>
+      <dd>{recorded(tool.platforms)}</dd>
+    </div>
+    <div>
+      <dt>Compliance</dt>
+      <dd>
+        {complianceStatement(tool.compliance_claims)}
+        {
+          tool.compliance_claims !== "unknown" && (
+            <span class="sources-inline">
+              {fieldSources(tool, "comp").map((url) => (
+                <a href={url} rel="noopener" target="_blank">{sourceLabel(url)}</a>
+              ))}
+            </span>
+          )
+        }
+      </dd>
+    </div>
+    <div>
+      <dt>Affiliate program</dt>
+      <dd>
+        {affiliateProgramSentence(tool.affiliate_program)}
+        {tool.affiliate_terms && tool.affiliate_terms !== "unknown" && <span> Program note, as recorded: {tool.affiliate_terms}</span>}
+        {
+          isHttpUrl(tool.affiliate_url) && (
+            <span class="sources-inline">
+              <a href={tool.affiliate_url} rel="noopener" target="_blank">Vendor program page ({sourceLabel(tool.affiliate_url)})</a>
+              <span class="meta">That page is not this site’s affiliate link unless the visit link above says affiliate.</span>
+            </span>
+          )
+        }
+      </dd>
+    </div>
+  </dl>
+
+  <h2>Pages checked</h2>
+  <ul class="sources">
+    {
+      tool.source_urls.map((url) => (
+        <li>
+          <a href={url} rel="noopener" target="_blank">{url}</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  {
+    related.length > 0 && (
+      <>
+        <h2>Appears on</h2>
+        <ul>
+          {related.map((page) => (
+            <li>
+              <a href={page.path}>{page.h1}</a>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+</Base>

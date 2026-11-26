@@ -1,0 +1,34 @@
+---
+import { href } from "../lib/paths";
+
+const links = [
+  ["Methodology", href("/methodology")],
+  ["Affiliate disclosure", href("/affiliate-disclosure")],
+  ["Privacy", href("/privacy")],
+  ["Contact", href("/contact")],
+  ["Get featured", href("/get-featured")],
+  ["Download the dataset", href("/data")],
+];
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="disclosure">
+      <strong>Disclosure.</strong>
+      If a link is labelled “affiliate”, it is a paid link and we may earn a commission. Alphabetical order does not change. A link without that label goes to the vendor’s official site.
+      <a href={href("/affiliate-disclosure")}>Full affiliate disclosure</a>.
+    </p>
+    <ul class="footer-nav">
+      {
+        links.map(([label, path]) => (
+          <li>
+            <a href={path}>{label}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="fine-print">
+      PrivateAsync. Prices and claims are copied from vendor pages and dated on each row. No cookies and no analytics scripts on this site.
+    </p>
+  </div>
+</footer>

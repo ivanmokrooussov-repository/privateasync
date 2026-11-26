@@ -1,0 +1,43 @@
+---
+import { GUMROAD_DATASET_URL, SAMPLE_TOOL_IDS } from "../config";
+import { tools } from "../lib/tools";
+
+interface Props {
+  compact?: boolean;
+  showHeading?: boolean;
+}
+
+const { compact = false, showHeading = true } = Astro.props;
+const gumroad = GUMROAD_DATASET_URL.trim();
+---
+
+<section class="dataset-block" aria-labelledby={showHeading ? "dataset-heading" : undefined} aria-label={showHeading ? undefined : "Download the dataset"}>
+  {showHeading && <h2 id="dataset-heading">Download the dataset</h2>}
+  {
+    compact ? (
+      <p>
+        A free CSV sample of {SAMPLE_TOOL_IDS.length} tools uses the same columns as the full file. The directory currently has {tools.length} tools.{" "}
+        <a href="/data/">About the dataset</a>.
+      </p>
+    ) : (
+      <p>
+        The free sample is {SAMPLE_TOOL_IDS.length} rows in CSV, with the same columns as the full file. The directory currently has {tools.length} tools. Values are copied from the verified rows. In the file, <code>affiliate_url</code> is the vendor’s program page when one was found, or <code>unknown</code>. It is not a tracking link for this site.
+      </p>
+    )
+  }
+  <p class="actions">
+    <a class="button secondary" href="/sample-tools.csv" download="privateasync-sample.csv">Download the free sample (CSV)</a>
+    {
+      gumroad && (
+        <a class="button" href={gumroad} rel="noopener" target="_blank">
+          Buy the full dataset
+        </a>
+      )
+    }
+  </p>
+  {
+    !gumroad && (
+      <p class="hint">The full dataset is not listed for sale on this page yet. Nothing is charged on this site.</p>
+    )
+  }
+</section>

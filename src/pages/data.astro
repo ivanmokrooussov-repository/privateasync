@@ -1,0 +1,62 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import DatasetDownload from "../components/DatasetDownload.astro";
+import { SAMPLE_TOOL_IDS, GUMROAD_DATASET_URL } from "../config";
+import { verifiedSentence } from "../lib/format";
+import { href, toolHref } from "../lib/paths";
+import { requireTool, tools } from "../lib/tools";
+import Base from "../layouts/Base.astro";
+import { absoluteUrl } from "../lib/paths";
+
+const sample = SAMPLE_TOOL_IDS.map((id) => requireTool(id));
+const description =
+  "Download a free CSV sample of the PrivateAsync dataset. The full file is offered only when a Gumroad link is configured. This site does not take payment.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: "PrivateAsync verified tools sample",
+  description: `CSV sample of ${sample.length} tools from the PrivateAsync directory. The full directory has ${tools.length} tools.`,
+  url: absoluteUrl("/data"),
+  distribution: {
+    "@type": "DataDownload",
+    encodingFormat: "text/csv",
+    contentUrl: absoluteUrl("/sample-tools.csv"),
+  },
+  creator: {
+    "@type": "Organization",
+    name: "PrivateAsync",
+    url: absoluteUrl("/"),
+  },
+};
+---
+
+<Base title="Download the dataset | PrivateAsync" description={description} jsonLd={jsonLd}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "Download the dataset" }]} />
+  <h1>Download the dataset</h1>
+  <p class="lede">
+    The directory is generated from one file of verified rows. {verifiedSentence(tools)} A free sample of {sample.length} of those rows is below. The full set has {tools.length} tools.
+  </p>
+  <p>
+    The sample is a lead-in, not the whole directory. It uses the same columns. <code>affiliate_url</code> in the file is the vendor’s program page when one was found, or <code>unknown</code>. It is not a tracking link used by this site.
+  </p>
+  <h2>Tools in the free sample</h2>
+  <ul>
+    {
+      sample.map((tool) => (
+        <li>
+          <a href={toolHref(tool.id)}>{tool.name}</a>
+          <span class="meta"> — {tool.category}</span>
+        </li>
+      ))
+    }
+  </ul>
+  <DatasetDownload showHeading={false} />
+  {
+    !GUMROAD_DATASET_URL.trim() && (
+      <p>
+        When a Gumroad product for the full file exists, its URL is added in the site config and a button appears above. Payment, if any, happens on Gumroad, not on this site.
+      </p>
+    )
+  }
+</Base>

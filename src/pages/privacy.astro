@@ -1,0 +1,38 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { contactUrl } from "../config";
+import { href } from "../lib/paths";
+import Base from "../layouts/Base.astro";
+
+const description =
+  "PrivateAsync sets no cookies and loads no analytics. It is a static site hosted on Cloudflare Pages.";
+---
+
+<Base title="Privacy | PrivateAsync" description={description}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "Privacy" }]} />
+  <h1>Privacy</h1>
+  <p class="lede">
+    This site does not set cookies and does not load third-party analytics or advertising scripts. There are no accounts and no forms.
+  </p>
+  <h2>What this site stores about you</h2>
+  <p>
+    The pages are static files. The site itself does not have a database of visitors, and the free CSV sample does not ask for an email address.
+  </p>
+  <h2>The host</h2>
+  <p>
+    The site is hosted on Cloudflare Pages. Cloudflare processes connection data, such as IP address and the page requested, to deliver the site and to protect it. That processing is Cloudflare’s, described in the
+    <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Cloudflare privacy policy</a>.
+  </p>
+  <h2>Links to other sites</h2>
+  <p>
+    Tool names link to pages on this site. “Official site” and a labelled affiliate link go to another website, which has its own policy. The browser will send that site a normal request. This site sets a referrer policy of <code>strict-origin-when-cross-origin</code>, so an HTTPS site you leave for receives the site name (<code>privateasync.pages.dev</code>), not the full address of the page you were on.
+  </p>
+  <p>
+    Contact and any paid dataset use the publisher’s Gumroad page,
+    <a href={contactUrl} rel="noopener" target="_blank">mokrooussov.gumroad.com</a>. Gumroad is a separate site.
+  </p>
+  <h2>The directory itself</h2>
+  <p>
+    The tool pages repeat public information from vendor websites, with the date it was checked. They are not a profile of any person. Questions about a vendor’s product go to that vendor. Questions about this directory go through the <a href={href("/contact")}>contact</a> page.
+  </p>
+</Base>

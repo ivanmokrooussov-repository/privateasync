@@ -1,0 +1,28 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { comparisons, toolsForComparison } from "../lib/comparisons";
+import { href } from "../lib/paths";
+import Base from "../layouts/Base.astro";
+
+const description =
+  "Comparison pages built from one verified dataset: Slack, Loom, Geekbot, and Zoom alternatives, plus async chat, business email, and file sharing.";
+---
+
+<Base title="Comparisons | PrivateAsync" description={description}>
+  <Breadcrumb items={[{ name: "Home", href: href("/") }, { name: "Comparisons" }]} />
+  <h1>Comparisons</h1>
+  <p class="lede">
+    Each page uses rows from the same dataset. The text explains how to read the columns. It does not add a score, and the tables stay alphabetical. There is no page for every pair of tools.
+  </p>
+  <div class="card-grid">
+    {
+      comparisons.map((page) => (
+        <a class="card" href={page.path}>
+          <h2>{page.h1}</h2>
+          <p class="meta">{toolsForComparison(page).length} tools</p>
+          <p>{page.description}</p>
+        </a>
+      ))
+    }
+  </div>
+</Base>

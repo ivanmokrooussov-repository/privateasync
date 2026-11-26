@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://privateasync.pages.dev/sitemap-index.xml

@@ -1,0 +1,2228 @@
+[
+ {
+  "id": "wire",
+  "name": "Wire",
+  "category": "E2EE team chat",
+  "official_url": "https://wire.com/en/",
+  "description": "End-to-end encrypted messaging, calls and file sharing for teams and government; open source, built on MLS, cloud or on-premises.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free (up to 5 people); Wire for SMB €7.45 per person/month billed annually (€8.94 monthly); Enterprise custom",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/wireapp/wire",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "Wire Swiss GmbH (Switzerland) per footer legal entity name",
+  "platforms": "unknown",
+  "compliance_claims": "ISO 27001, ISO 27701, GDPR (stated)",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://wire.com/en/partner-program",
+  "affiliate_terms": "Partner (reseller/VAR) program: tier-based discounts, deal registration; no consumer affiliate commission published",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://wire.com/en/",
+   "https://wire.com/en/pricing",
+   "https://wire.com/en/security",
+   "https://github.com/wireapp/wire"
+  ],
+  "field_sources": {
+   "free": [
+    "https://wire.com/en/pricing",
+    "https://wire.com/en/pricing"
+   ],
+   "price": [
+    "https://wire.com/en/pricing",
+    "https://wire.com/en/pricing"
+   ],
+   "e2ee": [
+    "https://wire.com/en/",
+    "https://wire.com/en/"
+   ],
+   "oss": [
+    "https://wire.com/en/",
+    "https://wire.com/en/"
+   ],
+   "self_host": [
+    "https://wire.com/en/",
+    "https://wire.com/en/"
+   ],
+   "hq": [
+    "https://wire.com/en/",
+    "https://wire.com/en/"
+   ],
+   "comp": [
+    "https://wire.com/en/security"
+   ],
+   "aff": [
+    "https://wire.com/en/",
+    "https://wire.com/en/"
+   ],
+   "repo": [
+    "https://wire.com/en/security",
+    "https://github.com/wireapp/wire"
+   ]
+  }
+ },
+ {
+  "id": "threema-work",
+  "name": "Threema Work",
+  "category": "E2EE team chat",
+  "official_url": "https://threema.com/en/work",
+  "description": "Swiss business messenger with end-to-end encryption, central user management and an optional self-hosted OnPrem variant.",
+  "free_tier": "no_trial_only",
+  "pricing_as_shown": "No free tier (30-day free trial); Core 3.00 per user per month (CHF/EUR/USD, annual payment); Professional 5.00 per user per month; OnPrem priced separately",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/threema-ch",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "Threema AG (Switzerland) – services operated on own servers in Switzerland, per site",
+  "platforms": "iOS, Android, desktop (macOS/Windows/Linux), web",
+  "compliance_claims": "GDPR-compliant (stated)",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://threema.com/en/partners/join",
+  "affiliate_terms": "Partner program (resellers); no affiliate commission terms found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://threema.com/en/work",
+   "https://threema.com/en/work/pricing",
+   "https://threema.com/en/open-source"
+  ],
+  "field_sources": {
+   "free": [
+    "https://threema.com/en/work",
+    "https://threema.com/en/work"
+   ],
+   "price": [
+    "https://threema.com/en/work",
+    "https://threema.com/en/work/pricing"
+   ],
+   "e2ee": [
+    "https://threema.com/en/work",
+    "https://threema.com/en/work"
+   ],
+   "oss": [
+    "https://threema.com/en/work",
+    "https://threema.com/en/open-source"
+   ],
+   "repo": [
+    "https://threema.com/en/open-source",
+    "https://threema.com/en/open-source"
+   ],
+   "self_host": [
+    "https://threema.com/en/work",
+    "https://threema.com/en/work"
+   ],
+   "hq": [
+    "https://threema.com/en/work",
+    "https://threema.com/en/work"
+   ],
+   "plat": [
+    "https://threema.com/en/open-source",
+    "https://threema.com/en/open-source"
+   ],
+   "comp": [
+    "https://threema.com/en/work",
+    "https://threema.com/en/work"
+   ],
+   "aff": [
+    "https://threema.com/en/work",
+    "https://threema.com/en/work"
+   ]
+  }
+ },
+ {
+  "id": "element",
+  "name": "Element",
+  "category": "E2EE team chat",
+  "official_url": "https://element.io/",
+  "description": "Matrix-based end-to-end encrypted messenger and collaboration app, self-hostable for digital sovereignty.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free app and free server distribution (ESS Community, per pricing page 'Free of charge'); Pro/Enterprise 'priced per seat/month' – no list price shown",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/element-hq/element-web",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "Element Creations Ltd / New Vector Ltd (legal entities per footer and repo license; country not stated)",
+  "platforms": "Windows, Mac, Linux, iOS, Android, web",
+  "compliance_claims": "unknown",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://element.io/partners",
+  "affiliate_terms": "Partner program page exists; no affiliate commission terms found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://element.io/",
+   "https://element.io/pricing",
+   "https://github.com/element-hq/element-web"
+  ],
+  "field_sources": {
+   "free": [
+    "https://element.io/pricing",
+    "https://element.io/pricing"
+   ],
+   "price": [
+    "https://element.io/pricing",
+    "https://element.io/pricing"
+   ],
+   "e2ee": [
+    "https://element.io/",
+    "https://element.io/"
+   ],
+   "oss": [
+    "https://element.io/",
+    "https://element.io/"
+   ],
+   "repo": [
+    "https://github.com/element-hq/element-web",
+    "https://github.com/element-hq/element-web"
+   ],
+   "self_host": [
+    "https://element.io/",
+    "https://element.io/"
+   ],
+   "hq": [
+    "https://element.io/",
+    "https://element.io/"
+   ],
+   "plat": [
+    "https://element.io/pricing",
+    "https://element.io/pricing"
+   ],
+   "aff": [
+    "https://element.io/",
+    "https://element.io/"
+   ]
+  }
+ },
+ {
+  "id": "signal",
+  "name": "Signal",
+  "category": "E2EE team chat",
+  "official_url": "https://signal.org/",
+  "description": "Free nonprofit messenger with end-to-end encrypted texts, calls and group chats (no admin console).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free (donation funded; no paid plans)",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/signalapp/Signal-Android",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Signal Technology Foundation (nonprofit; HQ country not stated on fetched pages)",
+  "platforms": "Android, iPhone/iPad, Windows, Mac, Linux",
+  "compliance_claims": "unknown",
+  "affiliate_program": "no",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "Site states: no ads, no affiliate marketers",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://signal.org/",
+   "https://github.com/signalapp/Signal-Android",
+   "https://signal.org/donate/"
+  ],
+  "field_sources": {
+   "free": [
+    "https://signal.org/",
+    "https://signal.org/"
+   ],
+   "price": [
+    "https://signal.org/",
+    "https://signal.org/"
+   ],
+   "e2ee": [
+    "https://signal.org/",
+    "https://signal.org/"
+   ],
+   "oss": [
+    "https://signal.org/",
+    "https://signal.org/"
+   ],
+   "repo": [
+    "https://github.com/signalapp/Signal-Android",
+    "https://github.com/signalapp/Signal-Android"
+   ],
+   "hq": [
+    "https://signal.org/",
+    "https://signal.org/"
+   ],
+   "plat": [
+    "https://signal.org/",
+    "https://signal.org/donate/"
+   ],
+   "aff": [
+    "https://signal.org/",
+    "https://signal.org/"
+   ]
+  }
+ },
+ {
+  "id": "aws-wickr",
+  "name": "AWS Wickr",
+  "category": "E2EE team chat",
+  "official_url": "https://aws.amazon.com/wickr/",
+  "description": "AWS end-to-end encrypted messaging, calling and file sharing service for enterprise and government.",
+  "free_tier": "unknown",
+  "pricing_as_shown": "Free trial for the first three months (per pricing page); base per-user plan price not captured; add-ons shown at $5 per user per month",
+  "e2ee": "yes",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "Amazon Web Services, Inc. (legal entity per footer)",
+  "platforms": "Windows 10+, macOS 10.13+, iOS 13+ (and Android)",
+  "compliance_claims": "FedRAMP High, DoD IL4/5 (stated)",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found (AWS Partner Network exists – not an affiliate scheme)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://aws.amazon.com/wickr/",
+   "https://aws.amazon.com/wickr/pricing/",
+   "https://aws.amazon.com/wickr/faqs/"
+  ],
+  "field_sources": {
+   "price": [
+    "https://aws.amazon.com/wickr/pricing/",
+    "https://aws.amazon.com/wickr/pricing/"
+   ],
+   "e2ee": [
+    "https://aws.amazon.com/wickr/",
+    "https://aws.amazon.com/wickr/"
+   ],
+   "self_host": [
+    "https://aws.amazon.com/wickr/",
+    "https://aws.amazon.com/wickr/"
+   ],
+   "hq": [
+    "https://aws.amazon.com/wickr/",
+    "https://aws.amazon.com/wickr/"
+   ],
+   "plat": [
+    "https://aws.amazon.com/wickr/faqs/",
+    "https://aws.amazon.com/wickr/faqs/"
+   ],
+   "comp": [
+    "https://aws.amazon.com/wickr/",
+    "https://aws.amazon.com/wickr/"
+   ]
+  }
+ },
+ {
+  "id": "stackfield",
+  "name": "Stackfield",
+  "category": "E2EE team chat",
+  "official_url": "https://www.stackfield.com/en",
+  "description": "German team collaboration platform (chat, tasks, files, video) hosted in Germany, with ISO 27001 and BSI C5.",
+  "free_tier": "no_trial_only",
+  "pricing_as_shown": "No free plan (14-day free trial); Starter €9, Business €14, Premium €18, Enterprise €28 per user and month; On-Premise option",
+  "e2ee": "yes",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "Germany (Stackfield GmbH; 'Made & hosted in Germany')",
+  "platforms": "unknown",
+  "compliance_claims": "ISO 27001, ISO 27017/27018, BSI C5 (stated)",
+  "affiliate_program": "unknown",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate/partner program page found on fetched pages",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.stackfield.com/en",
+   "https://www.stackfield.com/en/pricing"
+  ],
+  "field_sources": {
+   "price": [
+    "https://www.stackfield.com/en/pricing"
+   ],
+   "free": [
+    "https://www.stackfield.com/en/pricing",
+    "https://www.stackfield.com/en/pricing"
+   ],
+   "e2ee": [
+    "https://www.stackfield.com/en/pricing",
+    "https://www.stackfield.com/en/pricing"
+   ],
+   "self_host": [
+    "https://www.stackfield.com/en/pricing",
+    "https://www.stackfield.com/en/pricing"
+   ],
+   "hq": [
+    "https://www.stackfield.com/en/pricing",
+    "https://www.stackfield.com/en/pricing"
+   ],
+   "comp": [
+    "https://www.stackfield.com/en/pricing",
+    "https://www.stackfield.com/en/pricing"
+   ]
+  }
+ },
+ {
+  "id": "simplex-chat",
+  "name": "SimpleX Chat",
+  "category": "E2EE team chat",
+  "official_url": "https://simplex.chat/",
+  "description": "Private messenger with no user identifiers; double-ratchet end-to-end encryption; open source, self-hostable relay servers.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free (donation funded)",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/simplex-chat/simplex-chat",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Android, iOS, desktop",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found; accepts donations",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://simplex.chat/",
+   "https://github.com/simplex-chat/simplex-chat",
+   "https://simplex.chat/faq/"
+  ],
+  "field_sources": {
+   "free": [
+    "https://github.com/simplex-chat/simplex-chat",
+    "https://github.com/simplex-chat/simplex-chat"
+   ],
+   "e2ee": [
+    "https://github.com/simplex-chat/simplex-chat",
+    "https://github.com/simplex-chat/simplex-chat"
+   ],
+   "oss": [
+    "https://simplex.chat/",
+    "https://simplex.chat/"
+   ],
+   "repo": [
+    "https://simplex.chat/",
+    "https://github.com/simplex-chat/simplex-chat"
+   ],
+   "self_host": [
+    "https://simplex.chat/faq/",
+    "https://simplex.chat/faq/"
+   ],
+   "plat": [
+    "https://github.com/simplex-chat/simplex-chat",
+    "https://github.com/simplex-chat/simplex-chat"
+   ]
+  }
+ },
+ {
+  "id": "mattermost",
+  "name": "Mattermost",
+  "category": "Self-hosted / open-source chat",
+  "official_url": "https://mattermost.com/",
+  "description": "Self-hosted collaboration platform for engineering, security and operations teams with channels, playbooks and calls.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Professional and Enterprise: no list price shown (contact sales; Professional up to 250 users); free Team Edition/Entry self-hosted options per docs",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/mattermost/mattermost",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "ISO 27001, SOC 2, GDPR, NIS2, DORA programs supported (stated on Enterprise plan)",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://mattermost.com/partners/",
+  "affiliate_terms": "Reseller/partner programs; no affiliate commission terms found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://mattermost.com/",
+   "https://mattermost.com/pricing/",
+   "https://github.com/mattermost/mattermost"
+  ],
+  "field_sources": {
+   "price": [
+    "https://mattermost.com/pricing/",
+    "https://mattermost.com/pricing/"
+   ],
+   "oss": [
+    "https://mattermost.com/pricing/",
+    "https://mattermost.com/pricing/"
+   ],
+   "repo": [
+    "https://github.com/mattermost/mattermost",
+    "https://github.com/mattermost/mattermost"
+   ],
+   "self_host": [
+    "https://mattermost.com/",
+    "https://mattermost.com/"
+   ],
+   "comp": [
+    "https://mattermost.com/pricing/",
+    "https://mattermost.com/pricing/"
+   ],
+   "aff": [
+    "https://mattermost.com/",
+    "https://mattermost.com/"
+   ]
+  }
+ },
+ {
+  "id": "rocket-chat",
+  "name": "Rocket.Chat",
+  "category": "Self-hosted / open-source chat",
+  "official_url": "https://www.rocket.chat/",
+  "description": "Self-managed secure communications platform with optional end-to-end encryption, Matrix federation and omnichannel support.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Starter (self-managed, limited to 50 users) and Community free; paid plans quote-based (no list price shown)",
+  "e2ee": "optional",
+  "open_source": "yes",
+  "repo_url": "https://github.com/RocketChat/Rocket.Chat",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "ISO 27001, SOC 2 Type 2, HIPAA-supportive (BAA), GDPR support (stated on plan page)",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://www.rocket.chat/pricing",
+  "affiliate_terms": "Partner Program (resellers) mentioned in FAQ; no affiliate terms found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.rocket.chat/",
+   "https://www.rocket.chat/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://www.rocket.chat/pricing",
+    "https://www.rocket.chat/pricing"
+   ],
+   "e2ee": [
+    "https://www.rocket.chat/pricing",
+    "https://www.rocket.chat/pricing"
+   ],
+   "repo": [
+    "https://www.rocket.chat/",
+    "https://www.rocket.chat/pricing"
+   ],
+   "self_host": [
+    "https://www.rocket.chat/",
+    "https://www.rocket.chat/"
+   ],
+   "comp": [
+    "https://www.rocket.chat/pricing",
+    "https://www.rocket.chat/pricing"
+   ],
+   "price": [
+    "https://www.rocket.chat/pricing",
+    "https://www.rocket.chat/pricing"
+   ],
+   "aff": [
+    "https://www.rocket.chat/",
+    "https://www.rocket.chat/"
+   ],
+   "oss": [
+    "https://www.rocket.chat/",
+    "https://www.rocket.chat/pricing"
+   ]
+  }
+ },
+ {
+  "id": "nextcloud-talk",
+  "name": "Nextcloud Talk",
+  "category": "Self-hosted / open-source chat",
+  "official_url": "https://nextcloud.com/talk/",
+  "description": "Open-source self-hosted chat and video calls inside Nextcloud Hub.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Self-hosting free (open source); supported Nextcloud Talk plans from 71.29€ per user/year (Standard, min. 100 users); Premium 104.99€, Ultimate 204.75€ per user/year",
+  "e2ee": "optional",
+  "open_source": "yes",
+  "repo_url": "https://github.com/nextcloud/spreed",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "Nextcloud GmbH (Germany; Neckarsulm per site)",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://nextcloud.com/partners/",
+  "affiliate_terms": "Channel partner & ISV partner programs; no affiliate commission terms found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://nextcloud.com/talk/",
+   "https://nextcloud.com/pricing/",
+   "https://nextcloud.com/partners/",
+   "https://github.com/nextcloud/spreed"
+  ],
+  "field_sources": {
+   "price": [
+    "https://nextcloud.com/pricing/",
+    "https://nextcloud.com/pricing/"
+   ],
+   "hq": [
+    "https://nextcloud.com/partners/",
+    "https://nextcloud.com/partners/"
+   ],
+   "repo": [
+    "https://github.com/nextcloud/spreed",
+    "https://github.com/nextcloud/spreed"
+   ],
+   "self_host": [
+    "https://nextcloud.com/talk/",
+    "https://nextcloud.com/talk/"
+   ],
+   "aff": [
+    "https://nextcloud.com/talk/",
+    "https://nextcloud.com/talk/"
+   ]
+  }
+ },
+ {
+  "id": "stoat",
+  "name": "Stoat (formerly Revolt)",
+  "category": "Self-hosted / open-source chat",
+  "official_url": "https://stoat.chat/",
+  "description": "Open-source community chat platform (formerly Revolt), free and self-hostable.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/stoatchat/stoatchat",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "Revolt Platforms Ltd (per footer; country not stated)",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://stoat.chat/",
+   "https://github.com/stoatchat/stoatchat"
+  ],
+  "field_sources": {
+   "free": [
+    "https://stoat.chat/",
+    "https://stoat.chat/"
+   ],
+   "repo": [
+    "https://github.com/stoatchat/stoatchat",
+    "https://github.com/stoatchat/stoatchat"
+   ],
+   "hq": [
+    "https://stoat.chat/",
+    "https://stoat.chat/"
+   ],
+   "self_host": [
+    "https://stoat.chat/",
+    "https://stoat.chat/"
+   ]
+  }
+ },
+ {
+  "id": "campfire",
+  "name": "Campfire (ONCE)",
+  "category": "Self-hosted / open-source chat",
+  "official_url": "https://once.com/campfire",
+  "description": "Self-hosted group chat from 37signals' ONCE series; free under MIT license.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free (MIT license; self-hosted)",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/basecamp/once-campfire",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "37signals LLC (legal entity per footer)",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://once.com/campfire",
+   "https://github.com/basecamp/once-campfire"
+  ],
+  "field_sources": {
+   "free": [
+    "https://once.com/campfire",
+    "https://once.com/campfire"
+   ],
+   "repo": [
+    "https://once.com/campfire",
+    "https://github.com/basecamp/once-campfire"
+   ],
+   "hq": [
+    "https://once.com/campfire",
+    "https://once.com/campfire"
+   ]
+  }
+ },
+ {
+  "id": "infomaniak-kchat",
+  "name": "Infomaniak kChat",
+  "category": "Self-hosted / open-source chat",
+  "official_url": "https://www.infomaniak.com/en/kchat",
+  "description": "Swiss-hosted team chat from Infomaniak with channels, calls and AI summaries, part of kSuite.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Standard CHF 1.76 per user/month; Business CHF 7.34 (3.67 first-year promo); Enterprise CHF 13.83 (6.92 promo); a free kSuite tier is advertised",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Switzerland (designed and hosted in Geneva, per site)",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://www.infomaniak.com/en/membership",
+  "affiliate_terms": "Infomaniak affiliate programme: 'up to 50% commission' per official page (tiers from 25% per third-party summary of the FAQ)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.infomaniak.com/en/kchat",
+   "https://www.infomaniak.com/en/ksuite/ksuite-pro/prices",
+   "https://www.infomaniak.com/en/membership"
+  ],
+  "field_sources": {
+   "price": [
+    "https://www.infomaniak.com/en/ksuite/ksuite-pro/prices"
+   ],
+   "hq": [
+    "https://www.infomaniak.com/en/kchat",
+    "https://www.infomaniak.com/en/kchat"
+   ],
+   "aff": [
+    "https://www.infomaniak.com/en/membership"
+   ]
+  }
+ },
+ {
+  "id": "loom",
+  "name": "Loom",
+  "category": "Async video messaging",
+  "official_url": "https://www.loom.com/",
+  "description": "Async video messaging and screen recording (Atlassian).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Starter $0 (25 videos, 5-minute limit); Business $18 per user/month; Business + AI $24 per user/month",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No public affiliate program found (partners page 404; third-party reports program ended)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.loom.com/",
+   "https://www.loom.com/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://www.loom.com/pricing"
+   ],
+   "price": [
+    "https://www.loom.com/pricing"
+   ]
+  }
+ },
+ {
+  "id": "cap",
+  "name": "Cap",
+  "category": "Async video messaging",
+  "official_url": "https://cap.so/",
+  "description": "Open-source Loom alternative: screen/camera recording with shareable links; self-host or bring your own storage.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free ($0); Desktop License $29 per license/year or $58 once; Pro $12 per user/month or $8.16/month billed annually",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/CapSoftware/Cap",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Mac, Windows, Linux",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://partners.dub.co/cap",
+  "affiliate_terms": "40% per sale for 1 year; new users get 20% off for 12 months (official Dub program page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://cap.so/",
+   "https://cap.so/pricing"
+  ],
+  "field_sources": {
+   "price": [
+    "https://cap.so/",
+    "https://cap.so/"
+   ],
+   "repo": [
+    "https://cap.so/",
+    "https://cap.so/pricing"
+   ],
+   "self_host": [
+    "https://cap.so/",
+    "https://cap.so/"
+   ],
+   "plat": [
+    "https://cap.so/",
+    "https://cap.so/"
+   ]
+  }
+ },
+ {
+  "id": "tella",
+  "name": "Tella",
+  "category": "Async video messaging",
+  "official_url": "https://www.tella.com/",
+  "description": "Screen and camera recording tool for polished demos and tutorials.",
+  "free_tier": "no_trial_only",
+  "pricing_as_shown": "7-day free trial (no free plan); Pro $13/month billed annually ($16 monthly); Premium $19/month billed annually ($24 monthly)",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Tella HQ Inc. (legal entity per footer)",
+  "platforms": "unknown",
+  "compliance_claims": "SOC 2 Type II report (stated)",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://www.tella.com/affiliate-program",
+  "affiliate_terms": "30% recurring commission (no expiry while referral stays subscribed); referral gets 20% off first 3 months; commissions paid at the end of each month (official page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.tella.com/",
+   "https://www.tella.com/pricing",
+   "https://www.tella.com/affiliate-program"
+  ],
+  "field_sources": {
+   "free": [
+    "https://www.tella.com/",
+    "https://www.tella.com/"
+   ],
+   "price": [
+    "https://www.tella.com/pricing"
+   ],
+   "comp": [
+    "https://www.tella.com/",
+    "https://www.tella.com/"
+   ],
+   "aff": [
+    "https://www.tella.com/affiliate-program",
+    "https://www.tella.com/affiliate-program"
+   ],
+   "hq": [
+    "https://www.tella.com/",
+    "https://www.tella.com/"
+   ]
+  }
+ },
+ {
+  "id": "zight",
+  "name": "Zight",
+  "category": "Async video messaging",
+  "official_url": "https://zight.com/",
+  "description": "Screen capture, GIF and video recording for workplace communication (formerly CloudApp).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free plan $0; Create $9.95 per user/month billed annually; Collaborate $12 per user/month billed annually",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "unknown",
+  "affiliate_url": "https://zight.com/affiliate-program",
+  "affiliate_terms": "A referral program exists per support docs (page not retrievable; commission terms not published in fetched text)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://zight.com/",
+   "https://zight.com/pricing/",
+   "https://zight.com/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://zight.com/pricing/",
+    "https://zight.com/pricing"
+   ],
+   "price": [
+    "https://zight.com/pricing/",
+    "https://zight.com/pricing"
+   ]
+  }
+ },
+ {
+  "id": "screenpal",
+  "name": "ScreenPal",
+  "category": "Async video messaging",
+  "official_url": "https://screenpal.com/",
+  "description": "Screen recorder and video editor with hosting (formerly Screencast-O-Matic).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free plan; Education plans: Deluxe $3/mo, Max $6/mo as shown on the education plans page (consumer/business prices not captured)",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://screenpal.com/affiliate",
+  "affiliate_terms": "30% commission on annual and monthly Solo plans (official partner page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://screenpal.com/",
+   "https://screenpal.com/plans/education",
+   "https://screenpal.com/affiliate"
+  ],
+  "field_sources": {
+   "free": [
+    "https://screenpal.com/",
+    "https://screenpal.com/"
+   ],
+   "price": [
+    "https://screenpal.com/plans/education",
+    "https://screenpal.com/plans/education"
+   ],
+   "aff": [
+    "https://screenpal.com/affiliate"
+   ]
+  }
+ },
+ {
+  "id": "claap",
+  "name": "Claap",
+  "category": "Async video messaging",
+  "official_url": "https://www.claap.io/",
+  "description": "Async video meeting recording with AI summaries for teams.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Basic €0 (10 videos); Pro €30 / $40 per license/month (€24 when billed yearly); Business €60 / $75 per license/month",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://www.claap.io/affiliate-programs",
+  "affiliate_terms": "30% commission per referred deal; commissions paid as long as the affiliate's referral stays a customer (up to 2 years per page text); referrals get discount",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.claap.io/",
+   "https://www.claap.io/pricing",
+   "https://www.claap.io/affiliate-programs"
+  ],
+  "field_sources": {
+   "free": [
+    "https://www.claap.io/pricing",
+    "https://www.claap.io/pricing"
+   ],
+   "price": [
+    "https://www.claap.io/pricing"
+   ],
+   "aff": [
+    "https://www.claap.io/affiliate-programs",
+    "https://www.claap.io/affiliate-programs"
+   ]
+  }
+ },
+ {
+  "id": "vidyard",
+  "name": "Vidyard",
+  "category": "Async video messaging",
+  "official_url": "https://www.vidyard.com/",
+  "description": "Video messaging and analytics platform focused on sales and revenue teams.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free plan (5 videos/month, up to 30 minutes); Starter priced per seat (USD shown only after JS render – not captured); Teams/Enterprise custom",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://www.vidyard.com/partners-directory/",
+  "affiliate_terms": "Partner directory; no consumer affiliate terms found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.vidyard.com/",
+   "https://www.vidyard.com/pricing/"
+  ],
+  "field_sources": {
+   "free": [
+    "https://www.vidyard.com/pricing/",
+    "https://www.vidyard.com/pricing/"
+   ],
+   "aff": [
+    "https://www.vidyard.com/pricing/",
+    "https://www.vidyard.com/pricing/"
+   ]
+  }
+ },
+ {
+  "id": "supercut",
+  "name": "Supercut",
+  "category": "Async video messaging",
+  "official_url": "https://supercut.ai/",
+  "description": "Async screen recording and video updates for product teams (Loom alternative).",
+  "free_tier": "unknown",
+  "pricing_as_shown": "PRO $15 per seat/month billed yearly; 14-day free trial",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Float Labs Ltd (legal entity per footer)",
+  "platforms": "unknown",
+  "compliance_claims": "SOC2, ISO 27001, GDPR (listed in site footer)",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://supercut.ai/partners",
+  "affiliate_terms": "Partner program with recurring commission (rate not stated on page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://supercut.ai/",
+   "https://supercut.ai/pricing",
+   "https://supercut.ai/partners"
+  ],
+  "field_sources": {
+   "price": [
+    "https://supercut.ai/pricing"
+   ],
+   "free": [
+    "https://supercut.ai/pricing",
+    "https://supercut.ai/pricing"
+   ],
+   "aff": [
+    "https://supercut.ai/partners",
+    "https://supercut.ai/partners"
+   ],
+   "hq": [
+    "https://supercut.ai/",
+    "https://supercut.ai/"
+   ],
+   "comp": [
+    "https://supercut.ai/",
+    "https://supercut.ai/pricing"
+   ]
+  }
+ },
+ {
+  "id": "geekbot",
+  "name": "Geekbot",
+  "category": "Async standups & check-ins",
+  "official_url": "https://geekbot.com/",
+  "description": "Slack/Microsoft Teams bot that runs async standups, polls and surveys.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Starter free for up to 10 users; usage-based $3 per unique participant per month ($2.50 billed annually); polls $1 per respondent per month",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Slack, Microsoft Teams",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://geekbot.com/affiliates/",
+  "affiliate_terms": "20% recurring commission; 90-day cookie (official affiliate page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://geekbot.com/",
+   "https://geekbot.com/pricing/",
+   "https://geekbot.com/affiliate/"
+  ],
+  "field_sources": {
+   "free": [
+    "https://geekbot.com/",
+    "https://geekbot.com/"
+   ],
+   "price": [
+    "https://geekbot.com/pricing/",
+    "https://geekbot.com/pricing/"
+   ],
+   "aff": [
+    "https://geekbot.com/affiliate/",
+    "https://geekbot.com/affiliate/"
+   ]
+  }
+ },
+ {
+  "id": "dailybot",
+  "name": "DailyBot",
+  "category": "Async standups & check-ins",
+  "official_url": "https://www.dailybot.com/",
+  "description": "Async standups, check-ins and team rituals inside Slack, Teams, Google Chat and Discord.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Starter free; Essentials $2.40 and Advanced $5 per active user/month",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Dailybot Inc. (legal entity per footer)",
+  "platforms": "Slack, Microsoft Teams, Google Chat, Discord",
+  "compliance_claims": "unknown",
+  "affiliate_program": "unknown",
+  "affiliate_url": "https://www.dailybot.com/programs/partners/",
+  "affiliate_terms": "A partners program page exists; commission terms not published in fetched text",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.dailybot.com/",
+   "https://www.dailybot.com/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://www.dailybot.com/pricing"
+   ],
+   "price": [
+    "https://www.dailybot.com/pricing"
+   ],
+   "hq": [
+    "https://www.dailybot.com/",
+    "https://www.dailybot.com/"
+   ]
+  }
+ },
+ {
+  "id": "standuply",
+  "name": "Standuply",
+  "category": "Async standups & check-ins",
+  "official_url": "https://standuply.com/",
+  "description": "Slack/Teams standup bot with retros and planning poker.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Starter $0/mo (limited users); paid per-user plans listed on pricing page (amounts not captured in static HTML)",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Slack, Microsoft Teams",
+  "compliance_claims": "unknown",
+  "affiliate_program": "unknown",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate page found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://standuply.com/",
+   "https://standuply.com/pricing"
+  ],
+  "field_sources": {
+   "price": [
+    "https://standuply.com/pricing"
+   ],
+   "free": [
+    "https://standuply.com/",
+    "https://standuply.com/"
+   ]
+  }
+ },
+ {
+  "id": "steady",
+  "name": "Steady",
+  "category": "Async standups & check-ins",
+  "official_url": "https://steady.space/",
+  "description": "Async check-ins and status updates tied to goals and Jira/GitHub activity (formerly Status Hero).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Credit-based: 500 credits $25/month, 1,000 credits $50/month; 100 free credits per user added; free trial",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Steady Space Corp (legal entity per footer)",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "unknown",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate page found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://steady.space/",
+   "https://steady.space/pricing",
+   "https://runsteady.com/pricing/"
+  ],
+  "field_sources": {
+   "price": [
+    "https://steady.space/pricing",
+    "https://runsteady.com/pricing/"
+   ],
+   "free": [
+    "https://steady.space/pricing",
+    "https://steady.space/pricing"
+   ],
+   "hq": [
+    "https://steady.space/",
+    "https://steady.space/"
+   ]
+  }
+ },
+ {
+  "id": "standup-alice",
+  "name": "Standup Alice",
+  "category": "Async standups & check-ins",
+  "official_url": "https://standupalice.com/",
+  "description": "Low-cost standup bot for Slack, Teams, Google Chat and Webex.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free for the first 3 users ($0); Pro $1.99 per user/month for teams larger than 3",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Slack, Microsoft Teams, Webex, Google Chat",
+  "compliance_claims": "unknown",
+  "affiliate_program": "unknown",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate page found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://standupalice.com/",
+   "https://standupalice.com/pricing",
+   "https://www.standupalice.com/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://standupalice.com/pricing",
+    "https://www.standupalice.com/pricing"
+   ],
+   "price": [
+    "https://standupalice.com/pricing",
+    "https://www.standupalice.com/pricing"
+   ]
+  }
+ },
+ {
+  "id": "asincly",
+  "name": "Asincly",
+  "category": "Async standups & check-ins",
+  "official_url": "https://asincly.codeaz.org/",
+  "description": "Open-source (AGPL-3.0) video-first async standups with AI-drafted yesterday/today/blockers notes; self-hostable.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free €0 forever (up to 3 members); Pro €8 per member/month (€80 yearly), excl. VAT",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/codeaz-org/asincly",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Web",
+  "compliance_claims": "unknown",
+  "affiliate_program": "unknown",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://asincly.codeaz.org/",
+   "https://asincly.codeaz.org/pricing",
+   "https://github.com/codeaz-org/asincly"
+  ],
+  "field_sources": {
+   "free": [
+    "https://asincly.codeaz.org/pricing"
+   ],
+   "price": [
+    "https://github.com/codeaz-org/asincly",
+    "https://github.com/codeaz-org/asincly"
+   ],
+   "repo": [
+    "https://asincly.codeaz.org/",
+    "https://github.com/codeaz-org/asincly"
+   ],
+   "self_host": [
+    "https://asincly.codeaz.org/",
+    "https://asincly.codeaz.org/"
+   ]
+  }
+ },
+ {
+  "id": "morgenruf",
+  "name": "Morgenruf",
+  "category": "Async standups & check-ins",
+  "official_url": "https://github.com/morgenruf/morgenruf",
+  "description": "MIT-licensed open-source Slack app for async standups, coffee chats and kudos; free hosted or self-hosted.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free (hosted instance free at any team size; self-host MIT)",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/morgenruf/morgenruf",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Slack",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "Open-source, free; no affiliate program",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://github.com/morgenruf/morgenruf"
+  ],
+  "field_sources": {
+   "free": [
+    "https://github.com/morgenruf/morgenruf",
+    "https://github.com/morgenruf/morgenruf"
+   ],
+   "oss": [
+    "https://github.com/morgenruf/morgenruf",
+    "https://github.com/morgenruf/morgenruf"
+   ],
+   "repo": [
+    "https://github.com/morgenruf/morgenruf",
+    "https://github.com/morgenruf/morgenruf"
+   ],
+   "self_host": [
+    "https://github.com/morgenruf/morgenruf",
+    "https://github.com/morgenruf/morgenruf"
+   ]
+  }
+ },
+ {
+  "id": "twist",
+  "name": "Twist",
+  "category": "Threaded discussion & forums",
+  "official_url": "https://twist.com/",
+  "description": "Async-first team messaging organized in titled threads with no presence indicators (Doist).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free plan (C$0 – up to 1 month of history as shown); Unlimited C$8 per user/month (shown in CAD for a Canadian visitor; USD list shown on site selector)",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Doist Inc. (legal entity per footer)",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "Doist affiliate program is for Todoist, not Twist (per search result of Doist partner page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://twist.com/",
+   "https://twist.com/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://twist.com/pricing"
+   ],
+   "price": [
+    "https://twist.com/pricing"
+   ],
+   "hq": [
+    "https://twist.com/",
+    "https://twist.com/"
+   ]
+  }
+ },
+ {
+  "id": "zulip",
+  "name": "Zulip",
+  "category": "Threaded discussion & forums",
+  "official_url": "https://zulip.com/",
+  "description": "Open-source (Apache 2.0) team chat organized by topics for readable async conversations; self-host free or cloud.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free (self-hosted, all features; Cloud Free plan with 10,000 messages of search history); Standard $6.67 per user/month billed annually ($8 monthly); Plus $10 ($12 monthly)",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/zulip/zulip",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Web, desktop, iOS, Android",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "Partners page lists service/hosting partners; no affiliate commission found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://zulip.com/",
+   "https://zulip.com/plans/",
+   "https://zulip.com/plans"
+  ],
+  "field_sources": {
+   "free": [
+    "https://zulip.com/plans/",
+    "https://zulip.com/plans/"
+   ],
+   "price": [
+    "https://zulip.com/plans/",
+    "https://zulip.com/plans"
+   ],
+   "repo": [
+    "https://zulip.com/",
+    "https://zulip.com/plans/"
+   ],
+   "self_host": [
+    "https://zulip.com/",
+    "https://zulip.com/"
+   ]
+  }
+ },
+ {
+  "id": "discourse",
+  "name": "Discourse",
+  "category": "Threaded discussion & forums",
+  "official_url": "https://www.discourse.org/",
+  "description": "Open-source forum and community discussion platform with hosted plans.",
+  "free_tier": "unknown",
+  "pricing_as_shown": "Hosted Pro $100/month; Business $500/month; Enterprise custom; free trial",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/discourse/discourse",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "unknown",
+  "affiliate_url": "https://www.discourse.org/referral-terms",
+  "affiliate_terms": "Referral promotion terms page exists; commission not stated in captured text",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.discourse.org/",
+   "https://www.discourse.org/pricing"
+  ],
+  "field_sources": {
+   "price": [
+    "https://www.discourse.org/pricing"
+   ],
+   "free": [
+    "https://www.discourse.org/pricing",
+    "https://www.discourse.org/pricing"
+   ],
+   "repo": [
+    "https://www.discourse.org/",
+    "https://www.discourse.org/pricing"
+   ]
+  }
+ },
+ {
+  "id": "flarum",
+  "name": "Flarum",
+  "category": "Threaded discussion & forums",
+  "official_url": "https://flarum.org/",
+  "description": "Free MIT-licensed open-source forum software.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free forever (MIT licensed, self-hosted)",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/flarum/flarum",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Web",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://flarum.org/",
+   "https://github.com/flarum/flarum"
+  ],
+  "field_sources": {
+   "free": [
+    "https://flarum.org/"
+   ],
+   "repo": [
+    "https://github.com/flarum/flarum",
+    "https://github.com/flarum/flarum"
+   ],
+   "self_host": [
+    "https://flarum.org/",
+    "https://flarum.org/"
+   ]
+  }
+ },
+ {
+  "id": "basecamp",
+  "name": "Basecamp",
+  "category": "Threaded discussion & forums",
+  "official_url": "https://basecamp.com/",
+  "description": "All-in-one project management and team communication (message boards, chat, check-ins) from 37signals.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Basecamp Personal free (1 project, up to 3 people); Freelancer $29/mo; Pro $79/mo; Pro Plus $99/mo; Pro Unlimited $199/mo billed annually",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "Affiliate page https://basecamp.com/affiliates returns 404; no program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://basecamp.com/",
+   "https://basecamp.com/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://basecamp.com/pricing",
+    "https://basecamp.com/pricing"
+   ],
+   "price": [
+    "https://basecamp.com/pricing"
+   ]
+  }
+ },
+ {
+  "id": "proton-meet",
+  "name": "Proton Meet",
+  "category": "Private video meetings",
+  "official_url": "https://proton.me/meet",
+  "description": "End-to-end encrypted video meetings (MLS) from Proton; guests can join without an account.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free meeting available; Meet Professional $7.99 per user/month (24-hour meetings, up to 100 participants)",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Proton AG, Geneva, Switzerland (per footer)",
+  "platforms": "Browser, mobile, desktop",
+  "compliance_claims": "unknown",
+  "affiliate_program": "unknown",
+  "affiliate_url": "https://proton.me/partners/affiliates",
+  "affiliate_terms": "Proton Partners Program (https://proton.me/partners/affiliates) lists Mail, VPN, Drive, Pass and Lumo; Meet is not listed on the fetched page – confirm with Proton",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://proton.me/meet",
+   "https://proton.me/business/meet/pricing",
+   "https://proton.me/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://proton.me/meet",
+    "https://proton.me/meet"
+   ],
+   "price": [
+    "https://proton.me/business/meet/pricing"
+   ],
+   "e2ee": [
+    "https://proton.me/meet",
+    "https://proton.me/meet"
+   ],
+   "plat": [
+    "https://proton.me/business/meet/pricing",
+    "https://proton.me/business/meet/pricing"
+   ],
+   "hq": [
+    "https://proton.me/meet",
+    "https://proton.me/business/meet/pricing"
+   ],
+   "aff": [
+    "https://proton.me/meet",
+    "https://proton.me/pricing"
+   ]
+  }
+ },
+ {
+  "id": "jitsi-meet",
+  "name": "Jitsi Meet",
+  "category": "Private video meetings",
+  "official_url": "https://jitsi.org/jitsi-meet/",
+  "description": "Open-source video meetings you join from a browser link; optional end-to-end encryption mode.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free (public instance and self-host); JaaS paid hosting separate",
+  "e2ee": "optional",
+  "open_source": "yes",
+  "repo_url": "https://github.com/jitsi/jitsi-meet",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Web, desktop, mobile",
+  "compliance_claims": "unknown",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://jitsi.org/partners/",
+  "affiliate_terms": "Partners page exists; no affiliate terms found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://jitsi.org/jitsi-meet/",
+   "https://github.com/jitsi/jitsi-meet"
+  ],
+  "field_sources": {
+   "free": [
+    "https://jitsi.org/jitsi-meet/",
+    "https://jitsi.org/jitsi-meet/"
+   ],
+   "e2ee": [
+    "https://github.com/jitsi/jitsi-meet",
+    "https://github.com/jitsi/jitsi-meet"
+   ],
+   "repo": [
+    "https://jitsi.org/jitsi-meet/",
+    "https://github.com/jitsi/jitsi-meet"
+   ],
+   "self_host": [
+    "https://jitsi.org/jitsi-meet/",
+    "https://jitsi.org/jitsi-meet/"
+   ]
+  }
+ },
+ {
+  "id": "element-call",
+  "name": "Element Call",
+  "category": "Private video meetings",
+  "official_url": "https://element.io/features/element-call",
+  "description": "End-to-end encrypted group voice/video on the Matrix network, open in the browser.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free under AGPL-3.0 (or commercial license); included with Element",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/element-hq/element-call",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Web",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://element.io/features/element-call",
+   "https://github.com/element-hq/element-call"
+  ],
+  "field_sources": {
+   "free": [
+    "https://github.com/element-hq/element-call",
+    "https://github.com/element-hq/element-call"
+   ],
+   "repo": [
+    "https://github.com/element-hq/element-call",
+    "https://github.com/element-hq/element-call"
+   ]
+  }
+ },
+ {
+  "id": "bigbluebutton",
+  "name": "BigBlueButton",
+  "category": "Private video meetings",
+  "official_url": "https://bigbluebutton.org/",
+  "description": "Open-source virtual classroom and webinar software with whiteboard, breakout rooms and polls; self-hosted.",
+  "free_tier": "unknown",
+  "pricing_as_shown": "Open source (LGPL-3.0 per GitHub repo); no price listed; commercial hosting providers listed on project site",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/bigbluebutton/bigbluebutton",
+  "self_hostable": "unknown",
+  "hq_jurisdiction": "BigBlueButton Inc. (legal entity per footer)",
+  "platforms": "Web",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://bigbluebutton.org/",
+   "https://github.com/bigbluebutton/bigbluebutton"
+  ],
+  "field_sources": {
+   "repo": [
+    "https://github.com/bigbluebutton/bigbluebutton",
+    "https://github.com/bigbluebutton/bigbluebutton"
+   ],
+   "hq": [
+    "https://bigbluebutton.org/"
+   ],
+   "price": [
+    "https://bigbluebutton.org/",
+    "https://bigbluebutton.org/"
+   ],
+   "oss": [
+    "https://github.com/bigbluebutton/bigbluebutton",
+    "https://github.com/bigbluebutton/bigbluebutton"
+   ]
+  }
+ },
+ {
+  "id": "whereby",
+  "name": "Whereby",
+  "category": "Private video meetings",
+  "official_url": "https://whereby.com/",
+  "description": "Browser-based video meetings with embeddable video API.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Pro $10.99/month list ($8.24/month promo until Nov 30, 2026); Business $13.99 per host/month (min. 3 hosts)",
+  "e2ee": "no_claim",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "GDPR statement page (stated)",
+  "affiliate_program": "unknown",
+  "affiliate_url": "https://whereby.com/information/partnerships",
+  "affiliate_terms": "Partnerships page exists; 20% affiliate commission reported only by third-party directories – not verified",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://whereby.com/",
+   "https://whereby.com/information/meetings/pricing"
+  ],
+  "field_sources": {
+   "price": [
+    "https://whereby.com/information/meetings/pricing"
+   ],
+   "comp": [
+    "https://whereby.com/",
+    "https://whereby.com/"
+   ]
+  }
+ },
+ {
+  "id": "brave-talk",
+  "name": "Brave Talk",
+  "category": "Private video meetings",
+  "official_url": "https://brave.com/talk/",
+  "description": "Free browser-based video calls from Brave started from a link; no sign-up for free tier.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free calls, no limits, no login (per site); no paid plan price captured",
+  "e2ee": "no_claim",
+  "open_source": "unknown",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://brave.com/talk/"
+  ],
+  "field_sources": {
+   "free": [
+    "https://brave.com/talk/",
+    "https://brave.com/talk/"
+   ]
+  }
+ },
+ {
+  "id": "galene",
+  "name": "Galène",
+  "category": "Private video meetings",
+  "official_url": "https://galene.org/",
+  "description": "Small self-hosted video conference server; one binary, little to maintain.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free (open source)",
+  "e2ee": "no_claim",
+  "open_source": "yes",
+  "repo_url": "https://github.com/jech/galene",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Web",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://galene.org/"
+  ],
+  "field_sources": {
+   "free": [
+    "https://galene.org/",
+    "https://galene.org/"
+   ],
+   "repo": [
+    "https://galene.org/",
+    "https://galene.org/"
+   ],
+   "self_host": [
+    "https://galene.org/",
+    "https://galene.org/"
+   ]
+  }
+ },
+ {
+  "id": "tresorit",
+  "name": "Tresorit",
+  "category": "Secure file sharing",
+  "official_url": "https://tresorit.com/",
+  "description": "Zero-knowledge end-to-end encrypted cloud storage and file sharing for businesses.",
+  "free_tier": "unknown",
+  "pricing_as_shown": "unknown",
+  "e2ee": "yes",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "Windows, Mac, Linux, Android, iOS, Web",
+  "compliance_claims": "ISO 27001, GDPR, TISAX, FINRA (stated)",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://tresorit.com/partner-program",
+  "affiliate_terms": "Referral partner program: commission per successful referral; rate not published on the page (apply via the program page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://tresorit.com/",
+   "https://tresorit.com/pricing/business",
+   "https://tresorit.com/partner-program"
+  ],
+  "field_sources": {
+   "e2ee": [
+    "https://tresorit.com/pricing/business",
+    "https://tresorit.com/pricing/business"
+   ],
+   "plat": [
+    "https://tresorit.com/pricing/business",
+    "https://tresorit.com/pricing/business"
+   ],
+   "comp": [
+    "https://tresorit.com/pricing/business",
+    "https://tresorit.com/pricing/business"
+   ],
+   "aff": [
+    "https://tresorit.com/partner-program",
+    "https://tresorit.com/partner-program"
+   ]
+  }
+ },
+ {
+  "id": "proton-drive",
+  "name": "Proton Drive",
+  "category": "Secure file sharing",
+  "official_url": "https://proton.me/drive",
+  "description": "End-to-end encrypted cloud storage from Proton with docs, sheets and business plans.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free account; Drive Plus 200 GB $4.99/month list ($2.49/month promo shown)",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/ProtonDrive",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Switzerland (site: 'Proton is based in Switzerland')",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://proton.me/partners/affiliates",
+  "affiliate_terms": "30% on new subscriptions and renewals for Drive (official partner page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://proton.me/drive",
+   "https://proton.me/business/drive",
+   "https://proton.me/drive/pricing",
+   "https://proton.me/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://proton.me/drive",
+    "https://proton.me/drive"
+   ],
+   "price": [
+    "https://proton.me/drive",
+    "https://proton.me/drive"
+   ],
+   "repo": [
+    "https://proton.me/drive",
+    "https://proton.me/business/drive"
+   ],
+   "aff": [
+    "https://proton.me/drive/pricing",
+    "https://proton.me/pricing"
+   ],
+   "hq": [
+    "https://proton.me/drive",
+    "https://proton.me/drive"
+   ]
+  }
+ },
+ {
+  "id": "sync-com",
+  "name": "Sync.com",
+  "category": "Secure file sharing",
+  "official_url": "https://www.sync.com/",
+  "description": "Zero-knowledge encrypted cloud storage and file sharing for individuals and teams (Canada).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free plan; Teams Standard 1TB $8 per user/month list ($6 / $2 promo shown); Teams Unlimited per page $18 list",
+  "e2ee": "yes",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Canada (site: 'Canadian cloud storage'; entity Sync.com, Inc.)",
+  "platforms": "unknown",
+  "compliance_claims": "GDPR (stated)",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://www.sync.com/affiliates/",
+  "affiliate_terms": "Commission up to $150 per sale, via ShareASale; dedicated affiliate manager (official page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.sync.com/",
+   "https://www.sync.com/pricing/",
+   "https://www.sync.com/affiliates/"
+  ],
+  "field_sources": {
+   "price": [
+    "https://www.sync.com/pricing/"
+   ],
+   "hq": [
+    "https://www.sync.com/",
+    "https://www.sync.com/"
+   ],
+   "comp": [
+    "https://www.sync.com/",
+    "https://www.sync.com/"
+   ],
+   "aff": [
+    "https://www.sync.com/affiliates/",
+    "https://www.sync.com/affiliates/"
+   ]
+  }
+ },
+ {
+  "id": "filen",
+  "name": "Filen",
+  "category": "Secure file sharing",
+  "official_url": "https://filen.io/",
+  "description": "Zero-knowledge end-to-end encrypted cloud storage with open-source clients (Germany).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free tier; Pro I 200 GiB €1.99/month; Pro II 500 GiB €3.99; Pro III 2 TiB €8.99; Pro X 10 TiB €39.99",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/FilenCloudDienste",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://filen.io/terms",
+  "affiliate_terms": "Affiliate terms in ToS: 10% commission on qualifying monthly and annual purchases (lifetime plans excluded); €100 minimum withdrawal; payouts in Bitcoin only; manual processing up to 30 days; subject to approval (official ToS)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://filen.io/",
+   "https://filen.io/pricing"
+  ],
+  "field_sources": {
+   "free": [
+    "https://filen.io/",
+    "https://filen.io/"
+   ],
+   "price": [
+    "https://filen.io/pricing"
+   ],
+   "e2ee": [
+    "https://filen.io/",
+    "https://filen.io/"
+   ],
+   "repo": [
+    "https://filen.io/",
+    "https://filen.io/pricing"
+   ],
+   "aff": [
+    "https://filen.io/",
+    "https://filen.io/pricing"
+   ]
+  }
+ },
+ {
+  "id": "internxt",
+  "name": "Internxt",
+  "category": "Secure file sharing",
+  "official_url": "https://internxt.com/",
+  "description": "Zero-knowledge encrypted cloud storage (open source, audited) with business plans.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free: 1GB encrypted storage; paid annual and lifetime plans (euro amounts not captured in static HTML)",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://internxt.com/affiliates",
+  "affiliate_terms": "30% on annual plans, 15% on lifetime plans, up to $300 per sale; 30-day cookie (official page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://internxt.com/",
+   "https://internxt.com/pricing",
+   "https://internxt.com/affiliates"
+  ],
+  "field_sources": {
+   "free": [
+    "https://internxt.com/pricing",
+    "https://internxt.com/pricing"
+   ],
+   "e2ee": [
+    "https://internxt.com/",
+    "https://internxt.com/"
+   ],
+   "oss": [
+    "https://internxt.com/",
+    "https://internxt.com/"
+   ],
+   "aff": [
+    "https://internxt.com/affiliates",
+    "https://internxt.com/affiliates"
+   ]
+  }
+ },
+ {
+  "id": "nextcloud-hub",
+  "name": "Nextcloud Hub",
+  "category": "Secure file sharing",
+  "official_url": "https://nextcloud.com/",
+  "description": "Self-hosted open-source file sync, share and collaboration platform (files, Talk, Office).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Self-hosting free (open source); Enterprise subscriptions from 53.17€ per user/year for file-focused tiers (100+ users)",
+  "e2ee": "optional",
+  "open_source": "yes",
+  "repo_url": "https://github.com/nextcloud/server",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "reseller-only",
+  "affiliate_url": "https://nextcloud.com/partners/",
+  "affiliate_terms": "Channel partner & ISV partner programs; no affiliate commission found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://nextcloud.com/",
+   "https://nextcloud.com/pricing/",
+   "https://github.com/nextcloud/server"
+  ],
+  "field_sources": {
+   "price": [
+    "https://nextcloud.com/pricing/",
+    "https://nextcloud.com/pricing/"
+   ],
+   "repo": [
+    "https://github.com/nextcloud/server",
+    "https://github.com/nextcloud/server"
+   ],
+   "self_host": [
+    "https://nextcloud.com/",
+    "https://nextcloud.com/"
+   ]
+  }
+ },
+ {
+  "id": "cryptpad",
+  "name": "CryptPad",
+  "category": "Secure file sharing",
+  "official_url": "https://cryptpad.org/",
+  "description": "Open-source, end-to-end encrypted collaborative documents and file storage.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free account on public instance; paid supporter/premium plans on cryptpad.fr",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/cryptpad/cryptpad",
+  "self_hostable": "yes",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "none_found",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "No affiliate program found",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://cryptpad.org/",
+   "https://cryptpad.org/pricing",
+   "https://cryptpad.org/pricing/",
+   "https://github.com/cryptpad/cryptpad"
+  ],
+  "field_sources": {
+   "free": [
+    "https://cryptpad.org/pricing",
+    "https://cryptpad.org/pricing/"
+   ],
+   "e2ee": [
+    "https://cryptpad.org/",
+    "https://cryptpad.org/"
+   ],
+   "repo": [
+    "https://cryptpad.org/",
+    "https://github.com/cryptpad/cryptpad"
+   ],
+   "self_host": [
+    "https://cryptpad.org/",
+    "https://cryptpad.org/"
+   ]
+  }
+ },
+ {
+  "id": "proton-mail-business",
+  "name": "Proton Mail (Proton for Business)",
+  "category": "Encrypted email for teams",
+  "official_url": "https://proton.me/business/mail",
+  "description": "End-to-end encrypted email, calendar and drive for teams (Proton for Business).",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free personal account; Mail Essentials $6.99 per user/month; Workspace Standard $8.99; Workspace Premium $14.99 per user/month (14-day free trial)",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/ProtonMail",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Switzerland (site: 'Proton is based in Switzerland')",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://proton.me/partners/affiliates",
+  "affiliate_terms": "30% on new subscriptions and renewals for Proton Mail (official partner page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://proton.me/business/mail",
+   "https://proton.me/business/mail/pricing",
+   "https://github.com/ProtonMail",
+   "https://proton.me/mail/pricing",
+   "https://proton.me/partners/affiliates"
+  ],
+  "field_sources": {
+   "free": [
+    "https://proton.me/business/mail",
+    "https://proton.me/business/mail"
+   ],
+   "price": [
+    "https://proton.me/business/mail/pricing"
+   ],
+   "repo": [
+    "https://proton.me/business/mail",
+    "https://github.com/ProtonMail"
+   ],
+   "aff": [
+    "https://proton.me/mail/pricing",
+    "https://proton.me/partners/affiliates"
+   ],
+   "hq": [
+    "https://proton.me/business/mail",
+    "https://proton.me/business/mail"
+   ]
+  }
+ },
+ {
+  "id": "tuta",
+  "name": "Tuta Mail",
+  "category": "Encrypted email for teams",
+  "official_url": "https://tuta.com/",
+  "description": "End-to-end encrypted email and calendar, open source, with business plans and shared mailboxes.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free plan (1 GB); business mailbox 20 GB €3 per user/month; 500 GB €8 per user/month",
+  "e2ee": "yes",
+  "open_source": "yes",
+  "repo_url": "https://github.com/tutao/tutanota",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Germany (servers per site; HQ not explicitly stated)",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "credit-only",
+  "affiliate_url": "https://tuta.com/blog/refer-a-friend",
+  "affiliate_terms": "Refer-a-friend: referrer receives credits for 25% of payments in the referral's first month (yearly subscribers); credits, not cash (official blog)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://tuta.com/",
+   "https://tuta.com/pricing",
+   "https://tuta.com/blog/refer-a-friend"
+  ],
+  "field_sources": {
+   "free": [
+    "https://tuta.com/",
+    "https://tuta.com/"
+   ],
+   "price": [
+    "https://tuta.com/pricing",
+    "https://tuta.com/pricing"
+   ],
+   "repo": [
+    "https://tuta.com/",
+    "https://tuta.com/pricing"
+   ],
+   "hq": [
+    "https://tuta.com/pricing",
+    "https://tuta.com/pricing"
+   ],
+   "aff": [
+    "https://tuta.com/blog/refer-a-friend"
+   ]
+  }
+ },
+ {
+  "id": "mailfence",
+  "name": "Mailfence",
+  "category": "Encrypted email for teams",
+  "official_url": "https://mailfence.com/",
+  "description": "Secure private email with OpenPGP and optional encryption, from Belgium.",
+  "free_tier": "yes",
+  "pricing_as_shown": "Free 1 GB plan shown on homepage; paid plan prices not captured (pricing page unreachable by fetch)",
+  "e2ee": "optional",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Belgium (site: protected by Belgian law)",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://blog.mailfence.com/affiliate-program/",
+  "affiliate_terms": "Affiliate program: commission on paid subscriptions (rate not stated on official blog; apply via affiliate@mailfence.com per search summary)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://mailfence.com/",
+   "https://blog.mailfence.com/affiliate-program/"
+  ],
+  "field_sources": {
+   "free": [
+    "https://mailfence.com/",
+    "https://mailfence.com/"
+   ],
+   "aff": [
+    "https://blog.mailfence.com/affiliate-program/"
+   ],
+   "hq": [
+    "https://mailfence.com/",
+    "https://mailfence.com/"
+   ]
+  }
+ },
+ {
+  "id": "startmail",
+  "name": "StartMail",
+  "category": "Encrypted email for teams",
+  "official_url": "https://www.startmail.com/en/",
+  "description": "Private email service (Netherlands-based) with PGP, aliases and business plans.",
+  "free_tier": "no_trial_only",
+  "pricing_as_shown": "No free plan (7-day free trial); Personal $2.50/month first year ($4.99 list); Business $3.50/month first year ($6.99 list) – promo prices at time of fetch",
+  "e2ee": "optional",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "Netherlands (site: 'We are in the Netherlands')",
+  "platforms": "unknown",
+  "compliance_claims": "unknown",
+  "affiliate_program": "yes",
+  "affiliate_url": "https://www.startmail.com/affiliate",
+  "affiliate_terms": "100% commission on any Qualified Transaction (net sales value) for the first year (official page)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.startmail.com/en/",
+   "https://www.startmail.com/en/pricing/",
+   "https://www.startmail.com/pricing",
+   "https://www.startmail.com/en/affiliate/"
+  ],
+  "field_sources": {
+   "free": [
+    "https://www.startmail.com/en/pricing/",
+    "https://www.startmail.com/en/pricing/"
+   ],
+   "price": [
+    "https://www.startmail.com/en/pricing/",
+    "https://www.startmail.com/pricing"
+   ],
+   "aff": [
+    "https://www.startmail.com/en/affiliate/",
+    "https://www.startmail.com/en/affiliate/"
+   ],
+   "hq": [
+    "https://www.startmail.com/en/",
+    "https://www.startmail.com/en/"
+   ]
+  }
+ },
+ {
+  "id": "hushmail",
+  "name": "Hushmail for Business",
+  "category": "Encrypted email for teams",
+  "official_url": "https://www.hushmail.com/business/",
+  "description": "HIPAA-oriented encrypted email and secure web forms for healthcare, legal and business.",
+  "free_tier": "no_trial_only",
+  "pricing_as_shown": "Plans from $11.99 per month; 14-day free trial; Personal Basic plans listed",
+  "e2ee": "unknown",
+  "open_source": "not_stated",
+  "repo_url": "unknown",
+  "self_hostable": "not_stated",
+  "hq_jurisdiction": "unknown",
+  "platforms": "unknown",
+  "compliance_claims": "HIPAA-compliant email (stated)",
+  "affiliate_program": "unknown",
+  "affiliate_url": "unknown",
+  "affiliate_terms": "Site 'referral' pages are for healthcare client-referral forms, not an affiliate program; an affiliate page was not found (https://www.hushmail.com/affiliate returns 404)",
+  "date_verified": "2026-11-26",
+  "source_urls": [
+   "https://www.hushmail.com/business/",
+   "https://www.hushmail.com/pricing/"
+  ],
+  "field_sources": {
+   "price": [
+    "https://www.hushmail.com/business/",
+    "https://www.hushmail.com/business/"
+   ],
+   "free": [
+    "https://www.hushmail.com/pricing/",
+    "https://www.hushmail.com/pricing/"
+   ],
+   "comp": [
+    "https://www.hushmail.com/business/",
+    "https://www.hushmail.com/business/"
+   ],
+   "aff": [
+    "https://www.hushmail.com/business/",
+    "https://www.hushmail.com/business/"
+   ]
+  }
+ }
+]

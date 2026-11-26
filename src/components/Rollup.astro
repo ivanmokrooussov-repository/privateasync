@@ -1,0 +1,33 @@
+---
+import { displayToken } from "../lib/format";
+import type { Tool } from "../lib/types";
+
+interface Props {
+  title: string;
+  tools: Tool[];
+  field: "e2ee" | "free_tier" | "open_source" | "self_hostable";
+  order: string[];
+}
+
+const { title, tools, field, order } = Astro.props;
+const groups = order
+  .map((key) => ({
+    key,
+    names: tools.filter((tool) => tool[field] === key).map((tool) => tool.name),
+  }))
+  .filter((group) => group.names.length > 0);
+---
+
+<section class="rollup">
+  <h2>{title}</h2>
+  <ul>
+    {
+      groups.map((group) => (
+        <li>
+          <strong>{displayToken(group.key)}</strong>
+          <span class="meta"> ({group.names.length})</span>: {group.names.join(", ")}
+        </li>
+      ))
+    }
+  </ul>
+</section>
